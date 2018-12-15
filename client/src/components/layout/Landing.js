@@ -13,7 +13,7 @@ class Landing extends Component {
   render() {
     return (
       <div className="landing">
-        <h1 className="LandingHeader">DM Kit</h1>
+        <div className="LandingHeader">DM Kit</div>
         <p className="LandingText">
           {" "}
           Create and manage your own characters, monsters, encounters,
