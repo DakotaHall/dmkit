@@ -1,0 +1,5846 @@
+.App{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  overflow-y: auto;
+  background-color: black;
+}
+
+.SignUpText{
+  position: absolute;
+  color: white;
+  width: 100%;
+  text-align: center;
+  top: 5%;
+}
+
+.EmailText{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: white;
+  top: 20%;
+}
+.EmailInput{
+  position: absolute;
+  width: 100%;
+  left: 0%;
+  color: black;
+  top: 0%;
+  border-radius: 5px;
+}
+.EmailInputHolder{
+  position: absolute;
+  width: 50%;
+  left: 25%;
+  color: black;
+  height: 4.5%;
+  top: 23%;
+}
+.PasswordText{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: white;
+  top: 30%;
+}
+
+.PasswordInputHolder{
+  position: absolute;
+  width: 50%;
+  left: 25%;
+  color: black;
+  top: 33%;
+  height: 4.5%;
+  border-radius: 5px;
+}
+.PasswordInput2Holder{
+  position: absolute;
+  width: 50%;
+  left: 25%;
+  color: black;
+  height: 4.5%;
+  top: 43%;
+  border-radius: 5px;
+}
+.PasswordText2{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: white;
+  top: 40%;
+}
+
+.LoginSubmit{
+  position: absolute;
+  top: 40%;
+  border-radius: 5px;
+  width: 50%;
+  left: 25%;
+  height: 5%;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+  
+}
+.SignUpSubmit{
+  position: absolute;
+  top: 50%;
+  border-radius: 5px;
+  width: 50%;
+  left: 25%;
+  height: 5%;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+}
+
+.WelcomeText{
+  position: absolute;
+  font-size: 50px;
+  width: 100%;
+  top: 10%;
+  text-align: center;
+  color: white;
+}
+.DashboardWelcomeText{
+  position: absolute;
+  font-size: 50px;
+  width: 100%;
+  top: 2.5%;
+  text-align: center;
+  color: white;
+}
+
+.ProfileNeedHandleText{
+  position: absolute;
+  font-size: 25px;
+  width: 100%;
+  top: 20%;
+  text-align: center;
+  color: white;
+}
+
+.ProfileHandleInput{
+  position: absolute;
+  left: 20%;
+  width: 60%;
+  border-radius: 5px;
+  top: 27.5%;
+}
+.SubmitHandleButton{
+  
+  position: absolute;
+  top: 32.5%;
+  width: 60%;
+  left: 20%;
+  border-radius: 5px;
+  background-color: green;
+  height: 5%;
+  color: white;
+  cursor: pointer;
+}
+
+.landing {
+  height: 86.4%;
+  left: 0%;
+  min-width: 900px;
+  overflow-y: auto;
+  position: absolute;
+  top: 6.75%;
+  width: 100%;
+  z-index: 2;
+}
+.LandingHeader{
+  position: absolute;
+  width: 100%;
+  color: white;
+  text-align: center;
+  top: 2.5%;
+}
+.LandingText{
+  position: absolute;
+  width: 50%;
+  left: 25%;
+  top: 10%;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+}
+.LandingSignUp{
+  position: absolute;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  background-color: blue;
+  top: 30%;
+  height: 5%;
+  width: 10%;
+  font-size: 20px;
+  left: 35%;
+}
+.LandingSignUp:hover{
+  background-color: darkblue;
+color: white;
+}
+.LandingLogin{
+  position: absolute;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  background-color: green;
+  top: 30%;
+  height: 5%;
+  width: 10%;
+  font-size: 20px;
+  left: 55%;
+}
+.LandingLogin:hover{
+  background-color: darkgreen;
+  color: white;
+
+}
+.MaximizeThingy {
+  height: 89%;
+  left: 0%;
+  min-height: 100%;
+  min-width: 900px;
+  position: fixed;
+  top: 6%;
+  width: 100%;
+  z-index: 50;
+}
+.BlackText {
+  color: black;
+}
+.WebsiteHeader {
+  height: 7%;
+  min-height: 61.74px;
+  left: 0%;
+  position: sticky;
+  width: 100%;
+  top:-.2%;
+  z-index: 50;
+  min-width: 900px;
+}
+.DashboardLink {
+  position: absolute;
+  color: black;
+  left: 10%;
+  height: 100%;
+  top: 0%;
+  
+}
+.LogoutLink {
+  position: absolute;
+  color: black;
+  left: 60%;
+  height: 100%;
+  top: 0%;
+  
+}
+.DashboardLinkNavbar {
+  position: relative;
+  color: black;
+  height: 50%;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+.LogoutLinkNavbar {
+  position: relative;
+  color: black;
+  height: 50%;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+.HeaderLinksHolder {
+  width: 400px;
+  height: 7%;
+  min-height: 61.74px;
+  position: fixed;
+  right: 1%;
+  top: 0%;
+  font-size: 30px;
+  z-index: 500;
+}
+.NavbarLines{
+  position: fixed;
+  right: 5%;
+  z-index: 3;
+  top: 0%;
+  height: 7%;
+  min-height: 61.74px;
+  width: 5%;
+  color: black;
+}
+.NavbarLines:hover{
+  color: white;
+}
+.NavbarHiddenLinks{
+  position: fixed;
+  background-color: white;
+  right: 2.5%;
+  top: 5.5%;
+  z-index: 1000;
+  width: 20%;
+  border-radius: 5px;
+}
+.NavbarTriangle{
+  position: fixed;
+  z-index: 0;
+  transform:rotate(45deg);
+  background-color: white;
+  width: 10px;
+  height: 10px;
+  top: 5%;
+  right: 5.3%;
+}
+
+.WebsiteHeader .NavbarLines{
+display: none;
+}
+.DMKitLogo {
+  position: fixed;
+  height: 7%;
+  min-height: 61.74px;
+  width: 10%;
+  min-width: 120px;
+  left: 10%;
+  top: 0%;
+  color: white;
+  z-index: 2;
+  font-size: 40px;
+  
+  
+}
+.DMKitLogo:hover{
+  text-decoration: none;
+}
+.DarkOverlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  z-index: 50;
+}
+.DarkOverlayLowZIndex {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: absolute;
+  top: 0%;
+  
+  width: 100%;
+  z-index: 0;
+}
+.DarkOverlayFixed {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 86%;
+  overflow-y: hidden; 
+  position: fixed;
+  top: 7%;
+  left: 0%;
+  width: 100%;
+  z-index: 50;
+
+}
+.Show {
+  height: 100%;
+  left: 0%;
+  position: fixed;
+  top: 0%;
+  width: 100%;
+}
+.Hidden {
+  display: none;
+}
+.TextCentered {
+  text-align: center;
+}
+
+.Spinner {
+  height: 20%;
+  left: 45%;
+  position: absolute;
+  top: 40%;
+  width: 10%;
+}
+.EncounterInfo {
+  border: 1px solid black;
+  border-radius: 5px;
+  top: 11.5%;
+  height: 27%;
+  left: 2.5%;
+  position: absolute;
+  width: 15%;
+}
+.EncounterName {
+  height: 20%;
+  position: absolute;
+  right: -1%;
+  text-align: center;
+  width: 102%;
+  z-index: 2;
+}
+@font-face {
+  font-family: Adventure;
+  src: url("./fonts/Adventure.otf");
+}
+@font-face {
+  font-family: CenturyGothic;
+  src: url("./fonts/Century Gothic.ttf");
+}
+@font-face {
+  font-family: Rakkas-Regular;
+  src: url("./fonts/Rakkas-Regular.ttf");
+}
+@font-face {
+  font-family: RobotoCondensed;
+  src: url("./fonts/Roboto-Condensed.ttf");
+}
+@font-face {
+  font-family: Edosz;
+  src: url("./fonts/edosz.ttf");
+}
+.EncounterDescription {
+  border: none;
+  height: 80%;
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  z-index: 1;
+}
+.EncounterDescriptionText {
+  background-color: #c66b20;
+  border: 1px solid #773701;
+  border-radius: 3px;
+  height: 90%;
+  left: 5%;
+  position: absolute;
+  resize: none;
+  top: 5%;
+  width: 90%;
+}
+.EncounterDescriptionImage {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.EncounterNameImage {
+  font-size: 20px;
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 100%;
+}
+.EncounterNameText {
+  font-family: Adventure;
+  font-size: 30px;
+  height: 100%;
+  left: 0%;
+  overflow-x: auto;
+  position: absolute;
+  text-align: center;
+  top: 0%;
+  width: 100%;
+}
+.DiceRoller {
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 10px;
+  height: 27%;
+  left: 2.5%;
+  position: absolute;
+  top: 70.5%;
+  width: 15%;
+}
+.DiceRollerHeaderSection {
+  height: 20%;
+  left: -1%;
+  position: absolute;
+  width: 102%;
+  z-index: 5;
+}
+.DiceRollerBannerImage {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.DiceRollerHeaderText {
+  color: #212000;
+  font-family: Adventure;
+  font-size: 30px;
+  height: 20%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 6;
+}
+.DiceDisplayHolder {
+  border-radius: 5px;
+  height: 80%;
+  position: absolute;
+  text-align: center;
+  top: 20%;
+  width: 100%;
+}
+.DiceDisplayHolderImage {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+}
+.DiceRollerPageHolder {
+  height: 85%;
+  position: absolute;
+  top: 15%;
+  width: 100%;
+}
+.DiceDisplay {
+  background-color: #8f8d01;
+  border: 1px solid #494701;
+  border-radius: 3px;
+  height: 11%;
+  left: 2.5%;
+  margin-top: 2px;
+  position: relative;
+  width: 95%;
+  z-index: 5;
+}
+.NumberOfDice {
+  border-radius: 5px;
+  font-size: 15px;
+  height: 100%;
+  left: 3%;
+  margin-bottom: 1.5%;
+  position: absolute;
+  text-align: center;
+  width: 9%;
+}
+.SpecificDice {
+  font-size: 14px;
+  height: 100%;
+  left: 12%;
+  margin-bottom: 1.5%;
+  position: absolute;
+  text-align: center;
+  width: 10%;
+  overflow: ellipsis;
+}
+.SpecificDiceDX {
+  font-size: 14px;
+  height: 100%;
+  left: 11%;
+  margin-bottom: 1.5%;
+  position: absolute;
+  text-align: center;
+  width: 5%;
+}
+.dxNumber {
+  height: 100%;
+  left: 15%;
+  margin-bottom: 1.5%;
+  position: absolute;
+  text-align: center;
+  width: 10%;
+  border-radius: 5px;
+}
+.DiceRollPlus {
+  border: 1px solid black;
+  border-radius: 5px;
+  
+  height: 100%;
+  left: 26%;
+  position: absolute;
+  text-align: center;
+  width: 10%;
+}
+.DiceRollMinus {
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  
+  height: 100%;
+  left: 35%;
+  margin-left: 1%;
+  position: absolute;
+  text-align: center;
+  width: 10%;
+}
+.DiceModifier {
+  border-radius: 5px;
+  height: 100%;
+  left: 50%;
+  margin-bottom: 1.5%;
+  position: absolute;
+  text-align: center;
+  width: 10%;
+}
+.DiceRollButton {
+  border-radius: 5px;
+  border: 1px solid black;
+  height: 100%;
+  left: 62%;
+  margin-left: 1%;
+  position: absolute;
+  text-align: center;
+  width: 17%;
+  cursor: pointer;
+}
+.DiceRollButton:hover{
+  background-color: grey;
+}
+.DiceRollEquals {
+  display: inline-block;
+  height: 100%;
+  left: 80%;
+  margin-left: 1%;
+  position: absolute;
+  text-align: center;
+  width: 5%;
+}
+.DiceRollResults {
+  border-radius: 5px;
+  height: 100%;
+  left: 89%;
+  position: absolute;
+  width: 10%;
+}
+.InitiativeTracker {
+  border-radius: 5px;
+  color: black;
+  height: 27%;
+  left: 2.5%;
+  position: absolute;
+  top: 41.5%;
+  width: 15%;
+  z-index: 2;
+}
+.InitiativeDisplayAndSortContainer {
+  border-radius: 5px;
+  height: 80%;
+  position: absolute;
+  top: 17.5%;
+  width: 100%;
+}
+.InitiativePage {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.InitiativeTrackerImageHolder {
+  height: 18%;
+  left: -1%;
+  position: absolute;
+  width: 102%;
+  z-index: 4;
+}
+.InitiativeTrackerText {
+  color: #011306;
+  font-family: Adventure;
+  font-size: 25px;
+  height: 18%;
+  position: absolute;
+  text-align: center;
+  top: 0%;
+  width: 100%;
+  z-index: 5;
+}
+.InitiativeTrackerImage {
+  height: 100%;
+  width: 100%;
+  z-index: 4;
+}
+.InitiativeDisplayHolder {
+  border-radius: 5px;
+  color: black;
+  height: 82.5%;
+  overflow: auto;
+  position: absolute;
+  top: 0%;
+  width: 100%;
+}
+.InitiativeDisplayHolder::-webkit-scrollbar {
+  position: absolute;
+}
+.InitiativeDisplayHolder::-webkit-scrollbar-track {
+  background-color: #015f3c;
+  border-radius: 50px;
+}
+.InitiativeDisplayHolder::-webkit-scrollbar-thumb {
+  background: #11b778;
+  border-radius: 50px;
+  height: 50px;
+}
+.InitiativeDisplay {
+  background-color: #11b778;
+  border: 1px solid #015f3c;
+  border-radius: 3px;
+  color: black;
+  font-size: 15px;
+  height: 15%;
+  left: 0.5%;
+  margin: 1px auto;
+  position: relative;
+  width: 95%;
+  z-index: 2;
+}
+.InitiativeSortButton {
+  
+  border-radius: 3px;
+  bottom: 2.5%;
+  color: white;
+  left: 35%;
+  margin: 0 auto;
+  position: absolute;
+  width: 30%;
+}
+.InitiativeName {
+  height: 100%;
+  position: absolute;
+  text-overflow: ellipsis;
+  width: 40%;
+}
+.initiativeRollButton {
+  font-size: 15px;
+  height: 100%;
+  left: 41%;
+  position: absolute;
+  width: 10%;
+  cursor: pointer;
+}
+.InitiativePlusSign{
+  position: absolute;
+  color: white;
+  left: 53.5%;
+}
+.InitiativeEqualsSign{
+  position: absolute;
+  color: white;
+  left: 70%;
+}
+.InitiativeAddDexterity {
+  height: 100%;
+  left: 59%;
+  position: absolute;
+  width: 10%;
+}
+.InitiativeInput {
+  height: 100%;
+  left: 75%;
+  position: absolute;
+  width: 10%;
+}
+.InitiativeAddButton {
+border-radius: 50%;
+  height: 10%;
+  left: 85%;
+  position: absolute;
+  top: 3%;
+  width: 10%;
+  z-index: 10;
+  
+}
+
+.initiativeRemoveButton {
+  height: 100%;
+  left: 87%;
+  position: absolute;
+  top: 0%;
+  width: 12%;
+  z-index: 5;
+}
+.HeadSection {
+  height: 25%;
+  position: absolute;
+  right: -2%;
+  width: 105%;
+  z-index: 5;
+}
+.HeadSectionMaximized {
+  height: 10%;
+  position: absolute;
+  width: 100%;
+  z-index: 50;
+}
+.ArrowLeftMaximized {
+  height: 10%;
+  left: 0.5%;
+  position: absolute;
+  top: 40%;
+  width: 6%;
+  z-index: 50;
+}
+.ArrowRightMaximized {
+  height: 10%;
+  left: 93.25%;
+  position: absolute;
+  top: 40%;
+  width: 6%;
+  z-index: 50;
+}
+.canOverlap {
+  position: absolute;
+}
+.HeaderText {
+  bottom: 5%;
+  font-family: Adventure;
+  font-size: 40px;
+  height: 100%;
+  left: 120px;
+  position: absolute;
+  width: 20%;
+  z-index: 100;
+}
+.CharacterHeaderColor {
+  color: #bb1301;
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 0.3px;
+}
+.MonsterHeaderColor {
+  color: #712655;
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 0.3px;
+}
+.NPCHeaderColor {
+  color: #0e6169;
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 0.3px;
+}
+.EncounterInfoHeaderColor {
+  color: #521400;
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 0.3px;
+}
+.CharacterHeaderImage {
+  background-size: cover;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 5;
+}
+.CharacterHeaderRibbonSection {
+  height: 200%;
+  left: 4.75%;
+  position: absolute;
+  top: 5%;
+  width: 80px;
+}
+.CharacterHeaderRibbonSectionMaximized {
+  height: 100%;
+  left: 4.75%;
+  position: absolute;
+  top: 5%;
+  width: 10%;
+}
+.CharacterHeaderRibbon {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 6;
+}
+.ArrowRight {
+  height: 20%;
+  left: 98.2%;
+  position: absolute;
+  top: 45%;
+  width: 5%;
+  z-index: 10;
+}
+.ArrowLeft {
+  height: 20%;
+  left: -3.2%;
+  position: absolute;
+  top: 45%;
+  width: 5%;
+  z-index: 10;
+}
+.ArrowLeft:hover{
+  transform:translate(0px,-1px)
+}
+.ArrowRight:hover{
+  transform:translate(0px,-1px)
+}
+.BookArrowLeft:hover{
+  transform:translate(0px,-1px)
+}
+.BookArrowRight:hover{
+  transform:translate(0px,-1px)
+}
+.BookSubmitButton {
+  cursor: pointer;
+  position: absolute;
+  right: 2%;
+  width: 20%;
+  height: 6%;
+  top: .5%;
+  color: black;
+  font-size: 30px;
+  font-family: Adventure;
+  z-index: 2;
+  
+}
+
+.ButtonColorHelper{
+  
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+}
+.CharacterColor .ButtonColorHelper:hover{
+  color: white;
+  background-color: #99382b;
+  border: 1px solid #9a2011;
+}
+.MonsterColor .ButtonColorHelper:hover{
+  background-color: #78247c;
+  border: 1px solid #910d98;
+  color: white;
+}
+.NPCColor .ButtonColorHelper:hover{
+  background-color: #3195d7;
+  border: 1px solid #03548a;
+  color: white;
+}
+
+.testfullscreen .InvalidInput {
+  border-color: red;
+}
+.FormError {
+  bottom: -25%;
+  color: red;
+  font-size: 8px;
+  position: absolute;
+  text-align: center;
+  vertical-align: text-top;
+  width: 100%;
+  
+}
+
+.input:invalid {
+  border: 1px solid red;
+}
+.ArrowRightBook {
+  height: 10%;
+  left: 95%;
+  position: absolute;
+  top: 45%;
+  width: 2.5%;
+  z-index: 10;
+}
+.ArrowLeftBook {
+  height: 10%;
+  left: 2%;
+  position: absolute;
+  top: 45%;
+  width: 2.5%;
+  z-index: 10;
+}
+.ArrowRightBook:hover{
+  transform:translate(0px,-1px);
+}
+.ArrowLeftBook:hover{
+  transform:translate(0px,-1px);
+}
+.EncounterCharacters {
+  top: 2.5%;
+  display: block;
+  height: 30%;
+  letter-spacing: 0px;
+  position: absolute;
+  width: 45%;
+  left: 22.5%;
+  z-index: 1;
+}
+.CharacterDisplay {
+  border-radius: 5px;
+  color: black;
+  display: block;
+  height: 85%;
+  left: 0.5%;
+  letter-spacing: 0px;
+  padding: 10px;
+  position: absolute;
+  top: 18%;
+  width: 100%;
+}
+
+.EncounterMonsters {
+  display: block;
+  height: 30%;
+  letter-spacing: 0px;
+  position: absolute;
+  top: 35%;
+  position: absolute;
+  width: 45%;
+  left: 22.5%;
+  z-index: 1;
+}
+.MonsterDisplay {
+  border-radius: 5px;
+  color: black;
+  display: block;
+  height: 90%;
+  letter-spacing: 0px;
+  overflow-x: auto;
+  padding: 10px;
+  position: absolute;
+  top: 15%;
+  width: 100%;
+}
+.EncounterNPCs {
+  display: block;
+  height: 30%;
+  letter-spacing: 0px;
+  position: absolute;
+  top: 67.5%;
+  width: 45%;
+  left: 22.5%;
+  z-index: 1;
+}
+.NPCDisplay {
+  background-color: white;
+  border: 2px inset blue;
+  border-radius: 5px;
+  color: black;
+  display: block;
+  height: 90%;
+  letter-spacing: 0px;
+  overflow-x: auto;
+  padding: 10px;
+  position: absolute;
+  top: 15%;
+  width: 100%;
+}
+.EncounterCharacterStats {
+  display: inline-block;
+  height: 100%;
+  margin: auto;
+  overflow: auto;
+  position: relative;
+  vertical-align: top;
+  width: 33%;
+}
+.EncounterCharacterIndex {
+  background-color: white;
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  width: 10%;
+}
+.EncounterCharacterDisplay {
+  display: inline-block;
+  height: 100%;
+  margin: auto;
+  margin-left: 15%;
+  overflow: auto;
+  position: relative;
+  vertical-align: top;
+  width: 100%;
+}
+.EncounterCharacterStatsImage {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.EncounterCharacterMonsterNPCHolder {
+  border: none;
+  display: block;
+  height: 100%;
+  left: 0%;
+  position: absolute;
+  width: 100%;
+  z-index: 20;
+}
+.EncounterCharacterImage {
+  height: 45%;
+  left: 2.5%;
+  background-color: black;
+  border-radius: 5px;
+  color: black;
+  display: table-cell;
+  position: absolute;
+  text-align: center;
+  vertical-align: middle;
+  top: 4%;
+  width: 95%;
+}
+.EncounterMonstersAddMonsterButton {
+  display: table;
+  height: 50%;
+  position: absolute;
+  right: 5%;
+  top: 25%;
+  width: 4%;
+  z-index: 7;
+}
+
+.AddMonsterButton {
+  height: 20%;
+  left: 40%;
+  position: absolute;
+  top: 75%;
+  width: 20%;
+}
+
+.testfullscreen {
+  min-height: 776.16px;
+  
+  left: 0%;
+  min-width: 900px;
+  position: relative;
+  height: 88%;
+  width: 100%;
+  z-index: -1;
+}
+.myFooter {
+  bottom: 0%; 
+  color: white;
+  min-height: 44.1px;
+  height: 5%;
+  line-height: 40px;
+  position: sticky;
+  width: 100%;
+  z-index: -1;
+  min-width: 900px;
+}
+.RulesHelper {
+  border: 1px groove black;
+  border-radius: 5px;
+  color: black;
+  height: 85.25%;
+  left: 72.5%;
+  position: absolute;
+  width: 25%;
+  top: 12.5%;
+}
+.RulesHelperMinimized {
+  border: 1px groove black;
+  border-radius: 5px;
+  color: black;
+  height: 100%;
+  left: 92.5%;
+  overflow-y: auto;
+  position: absolute;
+  width: 5%;
+}
+.RulesHelperBannerHolder {
+  height: 7.5%;
+  left: -1%;
+  position: absolute;
+  top: -0.5%;
+  width: 102%;
+  z-index: 6;
+}
+.RulesHelperBannerImage {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.Dashboard {
+  height: 85.6%;
+  left: 0%;
+  overflow-y: auto;
+  position: fixed;
+  top: 7.5%;
+  width: 100%;
+  color: white;
+}
+
+.DashboardPages {
+  height: 77.5%;
+  position: absolute;
+  top: 12.5%;
+  width: 60%;
+  left: 20%;
+}
+.DashboardPage {
+  display: inline-block;
+  height: 50%;
+  position: relative;
+  width: 33%;
+}
+.DashboardPageQuest{
+  display: inline-block;
+  height: 50%;
+  position: relative;
+  width: 33%;
+}
+.ProfileActionsText {
+  color: #521400;
+  
+  font-family: Adventure;
+  font-size: 33px;
+  height: 100%;
+  left: 0%;
+  position: absolute;
+  top: 0%;
+  width: 100%;
+}
+.ProfileActionsNewCharacter {
+  height: 100%;
+  left: 6.43%;
+  position: absolute;
+  text-align: center;
+  width: 15%;
+}
+.ProfileActionsNewMonster {
+  height: 100%;
+  left: 21.43%;
+  position: absolute;
+  text-align: center;
+  width: 15%;
+}
+.ProfileActionsNewNPC {
+  height: 100%;
+  left: 36.43%;
+  position: absolute;
+  text-align: center;
+  width: 15%;
+}
+.ProfileActionsNewEncounter {
+  height: 100%;
+  left: 51.43%;
+  position: absolute;
+  text-align: center;
+  width: 15%;
+}
+.ProfileActionsNewSettlement {
+  height: 100%;
+  left: 66.43%;
+  position: absolute;
+  text-align: center;
+  width: 15%;
+}
+.ProfileActionsNewQuest {
+  height: 100%;
+  left: 81.43%;
+  position: absolute;
+  text-align: center;
+  width: 15%;
+}
+.SpecificCombatAction {
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 15px;
+  height: 5%;
+  margin: 1px;
+  margin-left: 5%;
+  margin-right: -3%;
+  overflow: auto;
+  text-align: center;
+  width: 45%;
+}
+.SpecificConditionDisplay {
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 15px;
+  height: 5%;
+  margin: 1px;
+  margin-left: 5%;
+  margin-right: -3%;
+  overflow: auto;
+  text-align: center;
+  width: 45%;
+}
+.CombatHelperSubheader {
+  border-radius: 3px;
+  display: block;
+  height: 5%;
+  margin: 0 auto;
+  margin-top: 5%;
+  margin-bottom: 5px;
+  margin-left: 27.5%;
+  overflow: auto;
+  text-align: center;
+  top: 1%;
+  width: 51%;
+  z-index: 5;
+}
+
+.OpenGamingLicenseLink {
+  position: absolute;
+  bottom: 0%;
+  height: 7%;
+  left: 1%;
+  width: 30%;
+  color: black;
+  z-index: 5000;
+  cursor: pointer;
+  display: table;
+  overflow: hidden;
+  text-overflow: clip;
+  font-size: 12px;
+}
+.ArtistCredit{
+  position: absolute;
+  bottom: 0%;
+  height: 7%;
+  right: 1%;
+  width: 33%;
+  color: black;
+  z-index: 5000;
+  display: table;
+  overflow: hidden;
+  text-overflow: clip;
+  font-size: 14px;
+}
+
+.ImageHolder {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.ImageFill {
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  position: absolute;
+  width: 100%;
+}
+.BookHolder{
+  height:100%;
+  position: absolute;
+  min-height: 700px;
+  top: 0%;
+  width: 100%;
+}
+.ImageFillTest {
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  position: absolute;
+  width: 100%;
+  z-index: 50;
+}
+.ImageFillTestExtra{
+  position: absolute;
+  right: 0%;
+  width: 30%;
+  border: 1px solid yellow;
+  background-color: orange;
+  height: 30%;
+}
+.ImageFillFixed {
+  height: 86.5%;
+  top: 6.75%;
+  left: 0%;
+  position: fixed;
+  width: 100%;
+  z-index: 50;
+}
+.ImageFillHighZIndex{
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  position: absolute;
+  width: 100%;
+  z-index: 50;
+}
+.PageText {
+  bottom: 10%;
+  color: black;
+  font-family: CenturyGothic;
+  font-size: 20px;
+  left: 0%;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+.DashboardBanner {
+  height: 12%;
+  position: absolute;
+  top: 5%;
+  width: 100%;
+}
+
+.ViewEncountersColors {
+  background-color: rgb(255, 217, 47);
+  border: 2px solid orange;
+  border-radius: 5px;
+  color: black;
+}
+.ViewEncountersColors:hover{
+  background-color: rgb(185, 158, 34);
+  border: 2px solid orange;
+  color: white;
+}
+
+.ViewCharactersColors {
+  background-color: lightsalmon;
+  border: 2px solid orangered;
+  border-radius: 5px;
+  color: black;
+}
+.ViewCharactersColors:hover{
+  background-color: rgb(241, 130, 86);
+  border: 2px solid orangered;
+  color: white;
+}
+
+.ViewMonstersColors {
+  background-color: #da3de3;
+  border: 2px solid #910d98;
+  border-radius: 5px;
+  color: black;
+}
+.ViewMonstersColors:hover{
+  background-color: #b132b8;
+  border: 2px solid #910d98;
+  color: white;
+}
+
+.ViewNPCsColors {
+  background-color: #3195d7;
+  border: 2px solid #03548a;
+  border-radius: 5px;
+  color: black;
+}
+.ViewNPCsColors:hover{
+  background-color: #226ea0;
+  border: 2px solid #03548a;
+  color: white;
+}
+
+.ViewSettlementsColors {
+  background-color: #11b778;
+  border: 2px solid #015f3c;
+  border-radius: 5px;
+  color: black;
+}
+.ViewSettlementsColors:hover{
+  background-color: #0d7e52;
+  border: 2px solid #015f3c;
+  color: white;
+}
+
+.ViewQuestsColors {
+  background-color: rgb(255, 255, 136);
+  border: 2px solid orange;
+  border-radius: 5px;
+  color: black;
+}
+.ViewQuestsColors:hover{
+  background-color: rgb(165, 165, 52);
+  border: 2px solid orange;
+  color: white;
+  
+}
+
+.DashboardViewButton {
+  bottom: 20%;
+  left: 30%;
+  position: absolute;
+  text-align: center;
+  width: 40%;
+  color: black;
+}
+
+.DashboardViewButton:hover{
+  text-decoration: none;
+}
+
+.RulesHelperHeaderText {
+  color: #212121;
+  font-family: Adventure;
+  font-size: 35px;
+  height: 100%;
+  height: 5%;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 6;
+}
+
+.RulesHelperDisplay {
+  border-radius: 5px;
+  font-family: RobotoCondensed;
+  height: 91.75%;
+  left: -3%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  text-align: center;
+  top: 7%;
+  width: 100%;
+}
+.RulesHelperDisplay::-webkit-scrollbar {
+  height: 100px;
+  margin: 5%;
+  padding: 5%;
+  width: 4%;
+}
+.RulesHelperDisplay::-webkit-scrollbar-track {
+  background-color: #3f3f3f;
+  border-radius: 50px;
+}
+.RulesHelperDisplay::-webkit-scrollbar-button:vertical {
+  height: 15px;
+  width: 0;
+}
+.RulesHelperDisplay::-webkit-scrollbar-thumb {
+  background: #7e7e7e;
+  border-radius: 50px;
+  height: 10px;
+}
+.RulesHelperDisplayImageHolder {
+  height: 94%;
+  position: absolute;
+  top: 6%;
+  width: 100%;
+}
+
+.SpecificCondition {
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 10%;
+  margin: 1px;
+  overflow: auto;
+  width: 49%;
+}
+.ConditionIconHolder {
+  float: left;
+  height: 5%;
+  position: absolute;
+  text-align: left;
+  width: 30px;
+}
+.ConditionIcon {
+  max-height: 100%;
+  max-width: 100%;
+  position: absolute;
+}
+.CharacterConditionIcon {
+  display: block;
+  margin: auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.ConditionText {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+}
+.CenteredIcon {
+  display: table;
+  height: 100%;
+  text-align: center;
+  width: 100%;
+}
+.BlackBorder {
+  border: 1px solid black;
+}
+.overlay {
+  background: #e9e9e9;
+  bottom: 0;
+  display: none;
+  left: 0;
+  opacity: 0.5;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+
+.EncounterMaximizeCharacterButton {
+  right: 2%;
+  position: absolute;
+  top: 4%;
+  z-index: 5;
+  background-color: #e85442;
+  border: 1px solid #9a2011;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.EncounterMaximizeMonsterButton {
+  right: 2%;
+  position: absolute;
+  top: 4%;
+  z-index: 5;
+  background-color: #da3de3;
+  border: 1px solid #910d98;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.EncounterMaximizeNPCButton {
+  right: 2%;
+  position: absolute;
+  top: 4%;
+  z-index: 5;
+  background-color: #3195d7;
+  border: 1px solid #03548a;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.EncounterMaximizeCharacterButton:hover {
+  color: white;
+  background-color: #99382b;
+  border: 1px solid #9a2011;
+  
+}
+.EncounterMaximizeMonsterButton:hover {
+  color: white;
+  background-color: #78247c;
+  border: 1px solid #910d98;
+  
+}
+.EncounterMaximizeNPCButton:hover {
+  color: white;
+  background-color: #1d577e;
+  border: 1px solid #03548a;
+  
+}
+
+.EncounterMinimizeCharacterButton {
+  left: 0%;
+  position: absolute;
+  top: 0%;
+  z-index: 2;
+}
+.EncounterCharacterNameAndClassAndLevel {
+  border-radius: 3px;
+  height: 16%;
+  left: 2.5%;
+  overflow: auto;
+  position: absolute;
+  text-align: center;
+  top: 51%;
+  width: 95%;
+}
+.RemoveButton {
+  border-radius: 5px;
+  height: 16%;
+  left: 83%;
+  position: absolute;
+  top: 70%;
+  width: 12.5%;
+  z-index: 0;
+  cursor: pointer;
+}
+.EncounterCharacterHP {
+  border-radius: 3px;
+  height: 16%;
+  left: 2.5%;
+  margin-top: 2px;
+  position: absolute;
+  top: 70%;
+  width: 25%;
+}
+.EncounterCharacterHPText {
+  display: inline-block;
+  font-size: 12px;
+  height: 100%;
+  text-align: center;
+  width: 45%;
+}
+.EncounterCharacterHPInput {
+  border: 2px solid grey;
+  display: inline-block;
+  font-size: 12px;
+  height: 100%;
+  position: relative;
+  top: 0%;
+  border-radius: 5px;
+  width: 50%;
+}
+.EncounterCharacterArmorClass {
+  border-radius: 3px;
+  height: 16%;
+  left: 29%;
+  margin-top: 2px;
+  position: absolute;
+  top: 70%;
+  width: 21%;
+}
+.EncounterCharacterACText {
+  display: inline-block;
+  font-size: 12px;
+  height: 100%;
+  text-align: center;
+  width: 45%;
+}
+.EncounterCharacterSpeedText {
+  display: inline-block;
+  font-size: 12px;
+  height: 100%;
+  text-align: center;
+  width: 60%;
+}
+.EncounterCharacterSpeed {
+  border-radius: 3px;
+  font-size: 12px;
+  height: 16%;
+  left: 51%;
+  margin-top: 2px;
+  position: absolute;
+  top: 70%;
+  width: 30%;
+}
+.EncounterCharacterACInput {
+  border: 2px solid grey;
+  font-size: 12px;
+  height: 100%;
+  width: 45%;
+  border-radius: 5px;
+}
+.EncounterCharacterSpeedInput {
+  border: 2px solid grey;
+  font-size: 12px;
+  height: 100%;
+  width: 37%;
+  border-radius: 5px;
+}
+
+.EncounterCharacterEnlargedInput {
+  background-color: white;
+  border: 1px solid grey;
+  bottom: 10%;
+  font-size: 14px;
+  height: 50%;
+  left: 10%;
+  position: absolute;
+  text-align: center;
+  overflow: hidden;
+  width: 80%;
+}
+.EncounterCharacterEnlargedModifier {
+  background-color: black;
+  border: 1px solid grey;
+  border-radius: 50%;
+  bottom: -12%;
+  color: white;
+  height: 27%;
+  left: 0%;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 5;
+}
+.ModifierText {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 12px;
+  height: 100%;
+  left: 0%;
+  position: absolute;
+  text-align: center;
+  top: 0%;
+  width: 100%;
+  z-index: 10;
+}
+.ModifierText::-webkit-inner-spin-button,
+.ModifierText::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+.EditCharacterSkill::-webkit-inner-spin-button,
+.EditCharacterSkill::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+.EditCharacterSpellSlot::-webkit-inner-spin-button,
+.EditCharacterSpellSlot::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+.EditCharacterInput::-webkit-inner-spin-button,
+.EditCharacterInput::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+.ConditionClicked {
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+}
+.ConditionUnclicked {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+}
+.clicked {
+  background-color: black;
+  color: white;
+}
+.unclicked {
+  background-color: white;
+  color: black;
+}
+.CharacterClicked {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+.CharacterUnclicked {
+  color: black;
+  cursor: pointer;
+}
+
+.RulesHelperPopup .RulesHelperText {
+  background-color: black;
+  border: 4px inset gold;
+  color: #fff;
+  left: 72.5%;
+  max-height: 82.5%;
+  overflow: auto;
+  position: fixed;
+  text-align: left;
+  top: 12.5%;
+  visibility: hidden;
+  width: 25%;
+  z-index: 50;
+}
+.RulesHelperPopup:hover .RulesHelperText {
+  visibility: visible;
+}
+.RulesHelperTestText{
+  background-color: black;
+  border: 4px inset gold;
+  color: #fff;
+  left: 72.5%;
+  max-height: 79%;
+  overflow: auto;
+  position: absolute;
+  text-align: left;
+  top: 18.25%;
+  width: 25%;
+  z-index: 50;
+}
+.NotAllowed{
+  cursor: not-allowed;
+}
+.SettlementName {
+  height: 6%;
+  left: 15%;
+  overflow: auto;
+  position: absolute;
+  text-align: center;
+  top: 10%;
+  width: 25%;
+}
+.BuildingOwnersText{
+  position: relative;
+  float: left;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.SettlementNameError {
+  color: red;
+  font-size: 8px;
+  left: 15%;
+  position: absolute;
+  text-align: center;
+  top: 10.75%;
+  vertical-align: text-top;
+  width: 25%;
+}
+.SettlementDescription {
+  height: 12%;
+  left: 7%;
+  overflow: auto;
+  position: absolute;
+  resize: none;
+  top: 16%;
+  width: 41.5%;
+}
+.SettlementImage {
+  height: 6%;
+  left: 7%;
+  position: absolute;
+  top: 30%;
+  width: 33.5%;
+}
+.SettlementPopulation {
+  height: 6%;
+  left: 41%;
+  position: absolute;
+  top: 28%;
+  width: 7.5%;
+}
+.SettlementEnvironment {
+  height: 10%;
+  left: 7%;
+  position: absolute;
+  resize: none;
+  top: 52%;
+  width: 41.5%;
+}
+.SettlementGovernment {
+  height: 10%;
+  left: 7%;
+  position: absolute;
+  resize: none;
+  top: 63%;
+  width: 41.5%;
+}
+.SettlementLaws {
+  height: 10%;
+  left: 7%;
+  position: absolute;
+  resize: none;
+  top: 74%;
+  width: 41.5%;
+}
+.SettlementCommerce {
+  height: 10%;
+  left: 7%;
+  position: absolute;
+  resize: none;
+  top: 85%;
+  width: 41.5%;
+}
+
+.SettlementNPCsDisplay {
+  border: 1px solid black;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 100%;
+  left: 0;
+  overflow: auto;
+  position: absolute;
+  top: 0%;
+  width: 100%;
+}
+.SettlementNPCsDisplayNumber{
+  position: relative;
+  width: 100%;
+  height: 5%;
+
+}
+.SettlementNPCsDisplayNumberText{
+  position: absolute;
+  right: 2.5%;
+  height: 100%;
+}
+.SettlementNPCDisplay {
+  border: 1px solid black;
+  display: inline-block;
+  height: 30%;
+  margin-left: 2.5%;
+  margin-top: 1%;
+  position: relative;
+  width: 30%;
+  border-radius: 5px;
+}
+.SettlementOrganizationNPCDisplay {
+  border: 1px solid black;
+  float: left;
+  height: 70%;
+  margin-left: 2.5%;
+  margin-top: 1%;
+  position: relative;
+  width: 30%;
+}
+.SettlementBuildingNPCDisplay {
+  border: 1px solid black;
+  float: left;
+  height: 50%;
+  margin-left: 2.5%;
+  margin-top: 1%;
+  position: relative;
+  width: 30%;
+}
+.SettlementNPCDisplayMaximized {
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  z-index: 1;
+}
+.NPCMaximizeButton {
+  font-size: 12px;
+  position: absolute;
+  right: 7.5%;
+}
+.NPCMinimizeButton {
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  right: 0%;
+  top: 0%;
+}
+.NPCAddedText{
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 7%;
+  left: 10%;
+  font-size: 30px;
+  position: absolute;
+  top: 0%;
+  width: 80%;
+  text-align: center;
+}
+
+.AddNPCButton {
+  border: 1px solid black;
+  float: left;
+  height: 30%;
+  margin-left: 2.5%;
+  margin-top: 1%;
+  position: relative;
+  width: 30%;
+  border-radius: 5px;
+}
+.AddOrganizationNPCButton {
+  border: 1px solid black;
+  
+  float: left;
+  height: 70%;
+  margin-left: 2.5%;
+  margin-top: 1%;
+  position: relative;
+  width: 30%;
+}
+.AddBuildingNPCButton {
+  border: 1px solid black;
+  
+  float: left;
+  height: 50%;
+  margin-left: 2.5%;
+  margin-top: 1%;
+  position: relative;
+  width: 30%;
+}
+.SettlementNPCName {
+  height: 25%;
+  left: 12.5%;
+  overflow: auto;
+  position: absolute;
+  top: 2.5%;
+  width: 75%;
+}
+.SettlementNPCDescriptionText {
+  height: 2%;
+  position: relative;
+}
+.SettlementNPCDescription {
+  height: 70%;
+  left: 2.5%;
+  position: absolute;
+  resize: none;
+  top: 30%;
+  width: 95%;
+}
+.SettlementNPCDescriptionTextMaximized {
+  left: 30%;
+  position: absolute;
+  top: 0%;
+}
+.SettlementNPCNameMaximized {
+  left: 1.5%;
+  overflow: auto;
+  position: absolute;
+  top: 45%;
+}
+.SettlementNPCDescriptionMaximized {
+  height: 75%;
+  left: 30%;
+  position: absolute;
+  resize: none;
+  top: 20%;
+  width: 32.5%;
+}
+.SettlementNPCBehaviorMaximized {
+  height: 75%;
+  left: 65%;
+  overflow: auto;
+  position: absolute;
+  resize: none;
+  top: 20%;
+  width: 32.5%;
+}
+.AddOrganizationButton {
+  position: fixed;
+  right: 2.5%;
+  top: 12%;
+}
+.SettlementOrganizationsText {
+  color: white;
+  font-size: 15px;
+  left: 50%;
+  position: absolute;
+  top: 7%;
+}
+.SettlementOrganizationsDisplay {
+  height: 35%;
+  left: 50%;
+  overflow: auto;
+  position: absolute;
+  top: 10%;
+  width: 47.5%;
+}
+.SettlementOrganizationDisplay {
+  border: 1px solid white;
+  display: inline-block;
+  height: 47%;
+  margin-left: 1%;
+  margin-top: 1%;
+  position: relative;
+  width: 32%;
+}
+.SettlementOrganizationDisplayMaximized {
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  z-index: 1;
+}
+.OrganizationMaximizeButton {
+  
+  font-size: 12px;
+  position: absolute;
+  right: 50%;
+  height: 100%;
+  width: 50%;
+  text-align: center;
+}
+.OrganizationMaximizeButton:hover{
+  background-color: grey;
+}
+.OrganizationMinimizeButton:hover{
+background-color: grey;
+}
+.OrganizationMinimizeButton {
+  
+  font-size: 15px;
+  position: absolute;
+  top: 0%;
+  right: 50%;
+  height: 101%;
+  width: 50%;
+}
+.OrganizationName {
+  height: 20%;
+  left: 20%;
+  overflow: auto;
+  position: absolute;
+  top: 5%;
+  width: 60%;
+}
+.OrganizationDescription {
+  height: 60%;
+  left: 5%;
+  position: absolute;
+  resize: none;
+  top: 30%;
+  width: 90%;
+}
+.OrganizationNameMaximized {
+  height: 10%;
+  left: 25%;
+  overflow: auto;
+  position: absolute;
+  top: 2.5%;
+  width: 50%;
+}
+.OrganizationDescriptionMaximized {
+  height: 25%;
+  left: 2.5%;
+  overflow: auto;
+  position: absolute;
+  resize: none;
+  top: 27%;
+  width: 95%;
+}
+.OrganizationNPCHolder {
+  height: 45%;
+  left: 0%;
+  position: absolute;
+  top: 55%;
+  width: 100%;
+}
+.BuildingNPCHolder {
+  height: 65%;
+  left: 0%;
+  position: absolute;
+  top: 35%;
+  width: 100%;
+}
+.OrganizationMembersHeading {
+  border: 2px solid black;
+  border-top-right-radius: 5px;
+  display: inline-block;
+  height: 10%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 50%;
+}
+.OrganizationLeadersHeading {
+  border: 2px solid black;
+  border-top-left-radius: 5px;
+  display: inline-block;
+  height: 10%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 50%;
+}
+.OrganizationHeadquarters {
+  height: 10%;
+  left: 25%;
+  overflow: auto;
+  position: absolute;
+  resize: none;
+  top: 15%;
+  width: 50%;
+}
+.OrganizationLeadersText {
+  left: 30%;
+  position: absolute;
+}
+.OrganizationLeadersDisplay {
+  height: 40%;
+  left: 30%;
+  overflow: auto;
+  position: absolute;
+  top: 7%;
+  width: 70%;
+}
+.OrganizationMembersText {
+  left: 30%;
+  position: absolute;
+  top: 46%;
+}
+.OrganizationMembersDisplay {
+  height: 40%;
+  left: 30%;
+  overflow: auto;
+  position: absolute;
+  top: 54%;
+  width: 70%;
+}
+.OrganizationLeader {
+  height: 45%;
+  position: relative;
+  width: 100%;
+}
+.OrganizationLeaderName {
+  height: 50%;
+  left: 0%;
+  overflow: auto;
+  position: absolute;
+  top: 25%;
+  width: 20%;
+}
+.OrganizationLeaderDescription {
+  height: 100%;
+  left: 22.5%;
+  position: absolute;
+  resize: none;
+  width: 37%;
+}
+.OrganizationLeaderBehavior {
+  height: 100%;
+  left: 62%;
+  overflow: auto;
+  position: absolute;
+  resize: none;
+  width: 37%;
+}
+.AddOrganizationLeader {
+  left: 42.5%;
+  position: absolute;
+  top: 0%;
+}
+.AddBuildingOwner {
+  color: white;
+  left: 42.5%;
+  position: absolute;
+  top: 0%;
+}
+.AddBuildingWorker {
+  color: white;
+  left: 42.5%;
+  position: absolute;
+  top: 0%;
+}
+.AddOrganizationMember {
+  left: 42.5%;
+  position: absolute;
+  top: 47%;
+}
+.ShowButton {
+  border: 1px solid white;
+  color: white;
+  left: 50%;
+  position: absolute;
+}
+.ShowInfoButton {
+  position: absolute;
+  border-radius: 1px;
+  right: 2.5%;
+  width: 25%;
+  height: 7.5%;
+  top: 2.5%;
+  font-family: Adventure;
+  text-align: center;
+  font-size: 35px;
+  background-color: rgb(255, 217, 47);
+  border: 2px solid orange;
+  color: black;
+  z-index: 2;
+  cursor: pointer;
+  display: table;
+}
+.ShowInfoButton:hover{
+  background-color: rgb(185, 158, 34);
+  border: 2px solid orange;
+  color: white;
+}
+.SettlementBuildingsDisplayText {
+  color: white;
+  left: 50%;
+  position: absolute;
+}
+.SettlementBuildingsDisplay {
+  border: 1px solid white;
+  height: 49%;
+  left: 50%;
+  position: absolute;
+  top: 48.5%;
+  width: 47.5%;
+}
+.SettlementBuildingDisplay {
+  border: 1px solid white;
+  display: inline-block;
+  height: 32%;
+  margin-left: 1%;
+  margin-top: 1%;
+  position: relative;
+  width: 32%;
+}
+.BuildingMaximizeButton {
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  right: 0%;
+}
+.BuildingName {
+  height: 15%;
+  left: 10%;
+  margin-top: 2%;
+  overflow: auto;
+  position: relative;
+  text-align: center;
+  width: 80%;
+}
+.BuildingDescriptionText {
+  height: 15%;
+  left: 5%;
+  position: relative;
+}
+.BuildingDescription {
+  height: 63%;
+  left: 5%;
+  overflow: auto;
+  position: absolute;
+  resize: none;
+  top: 30%;
+  width: 90%;
+}
+.AddBuildingButton {
+  position: fixed;
+  right: 2.5%;
+  top: 46%;
+}
+.BuildingOwner {
+  border: 1px solid black;
+  height: 100%;
+  left: 0%;
+  position: relative;
+  top: 0%;
+  width: 100%;
+}
+.BuildingOwnerNames {
+  height: 10%;
+  margin-left: 25%;
+  margin-top: 2%;
+  overflow: auto;
+  position: absolute;
+  text-align: center;
+  width: 50%;
+}
+.BuildingOwnerDescription {
+  height: 40%;
+  left: 2.5%;
+  position: absolute;
+  resize: none;
+  top: 15%;
+  width: 95%;
+}
+.BuildingOwnerBehavior {
+  height: 40%;
+  left: 2.5%;
+  overflow: auto;
+  position: absolute;
+  resize: none;
+  top: 57.5%;
+  width: 95%;
+}
+.SettlementBuildingDisplayMaximized {
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  z-index: 1;
+}
+.BuildingNameMaximized {
+  height: 7%;
+  left: 25%;
+  overflow: auto;
+  position: absolute;
+  text-align: center;
+  top: 1.5%;
+  width: 50%;
+}
+.BuildingDescriptionTextMaximized {
+  color: white;
+  left: 2.5%;
+  position: absolute;
+  top: 7%;
+}
+.BuildingDescriptionMaximized {
+  height: 20%;
+  left: 2.5%;
+  overflow: auto;
+  position: absolute;
+  resize: none;
+  top: 12%;
+  width: 95%;
+}
+
+.BuildingOwnersDisplay {
+  height: 69%;
+  left: 2.5%;
+  overflow: auto;
+  position: absolute;
+  top: 30%;
+  width: 23%;
+}
+.BuildingWorker {
+  border: 1px solid black;
+  height: 100%;
+  left: 0%;
+  position: relative;
+  top: 0%;
+  width: 100%;
+}
+.BuildingWorkersText {
+  color: white;
+  left: 34%;
+  position: absolute;
+  top: 25%;
+}
+.BuildingWorkersDisplay {
+  height: 69%;
+  left: 27%;
+  overflow: auto;
+  position: absolute;
+  top: 30%;
+  width: 23%;
+}
+.BuildingWorkerNames {
+  height: 5%;
+  left: 25%;
+  overflow: auto;
+  position: absolute;
+  text-align: center;
+  top: 1%;
+  width: 50%;
+}
+.BuildingWorkerDescription {
+  height: 40%;
+  left: 2.5%;
+  position: absolute;
+  resize: none;
+  top: 15%;
+  width: 95%;
+}
+.BuildingWorkerBehavior {
+  height: 40%;
+  left: 2.5%;
+  overflow: auto;
+  position: absolute;
+  resize: none;
+  top: 57.5%;
+  width: 95%;
+}
+.BuildingStockText {
+  color: black;
+  left: 25%;
+  position: absolute;
+  text-align: center;
+  top: 31%;
+  width: 50%;
+}
+.BuildingStockDisplay {
+  border: 1px solid black;
+  height: 18%;
+  left: 2.5%;
+  overflow: auto;
+  position: absolute;
+  top: 35%;
+  width: 95%;
+}
+.StockItem {
+  height: 20%;
+  position: relative;
+  width: 100%;
+}
+.EditStockNameHolder {
+  border: 1px solid black;
+  height: 100%;
+  left: 0%;
+  position: absolute;
+  top: 0%;
+  width: 20%;
+}
+.EditStockPriceHolder {
+  border: 1px solid black;
+  height: 100%;
+  left: 20%;
+  position: absolute;
+  top: 0%;
+  width: 10%;
+}
+.EditStockDescriptionHolder {
+  border: 1px solid black;
+  height: 100%;
+  left: 30%;
+  position: absolute;
+  top: 0%;
+  width: 70%;
+}
+.BuildingStockItemsNames {
+  height: 50%;
+  left: 5%;
+  overflow: auto;
+  position: absolute;
+  top: 25%;
+  width: 90%;
+}
+.BuildingStockItemsPrices {
+  height: 50%;
+  left: 5%;
+  position: absolute;
+  top: 25%;
+  width: 90%;
+}
+.BuildingStockItemsDescriptions {
+  height: 100%;
+  left: 1%;
+  overflow: auto;
+  position: absolute;
+  resize: none;
+  width: 95%;
+}
+.AddBuildingWorker {
+  color: white;
+  left: 49%;
+  position: absolute;
+  top: 25.5%;
+}
+.AddBuildingOwner {
+  color: white;
+  left: 20%;
+  position: absolute;
+  top: 25.5%;
+}
+.AddBuildingStock {
+  border: 1px solid black;
+  color: black;
+  
+  font-size: 20px;
+  height: 15%;
+  left: 0%;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+  cursor: pointer;
+}
+.AddBuildingStock:hover{
+  background-color: black;
+  color: white;
+}
+.RemoveBuildingOwner {
+  position: absolute;
+}
+
+.RemoveMaximizeHolder{
+  top: 0%;
+  right: 0%;
+  width: 30px;
+  height: 10%;
+  position: absolute;
+  z-index: 2;
+}
+.RemoveMaximizeHolderMaximized{
+  top: 0%;
+  right: 0%;
+  width: 40px;
+  height: 3%;
+  position: absolute;
+}
+.RemoveMaximizeHolderSettlementNPC{
+  top: 2%;
+  right: 1.5%;
+  width: 55px;
+  height: 3%;
+  position: absolute;
+  background-color: white;
+  
+  z-index: 2;
+}
+
+
+.RemoveBuilding {
+  
+  font-size: 12px;
+  position: absolute;
+  right: 0%;
+  
+  height: 101%;
+  width: 50%;
+  text-align: center;
+
+}
+.AddCreatedNPC{
+  
+  font-size: 15px;
+  position: absolute;
+  right: 0%;
+  height: 100%;
+  width: 50%;
+  text-align: center;
+}
+.AddCreatedNPC:hover{
+  color: white;
+  background-color: green;
+}
+.RemoveBuilding:hover{
+  color: white;
+  background-color: red;
+}
+.RemoveBuildingMaximized {
+  
+  font-size: 15px;
+  position: absolute;
+  right: 0%;
+  height: 100%;
+  width: 50%;
+  text-align: center;
+}
+.RemoveBuildingMaximized:hover{
+  color: white;
+  background-color: red;
+}
+.BuildingMinimizeButton {
+  
+  font-size: 15px;
+  position: absolute;
+  right: 50%;
+  height: 100%;
+  width: 50%;
+  text-align: center;
+}
+
+.ViewPageHolder {
+  height: 100%;
+  position: absolute;
+  min-height: 740px;
+  top: 0%;
+  width: 100%;
+}
+.MaximizeHolder {
+  background-color: white;
+  height: 80%;
+  left: 10%;
+  overflow: auto;
+  position: fixed;
+  top: 10%;
+  width: 80%;
+}
+.ViewPageCharacter {
+  border: 1px solid black;
+  float: left;
+  height: 30%;
+  margin-left: 2.5%;
+  margin-top: 2.5%;
+  position: relative;
+  width: 30%;
+  border-radius: 5px;
+}
+.ViewPageBackgroundImage {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+.ViewPageAddButton {
+  border: 1px solid black;
+  display: table;
+  float: left;
+  border-radius: 5px;
+  height: 30%;
+  margin-left: 2.5%;
+  margin-top: 2.5%;
+  position: relative;
+  width: 30%;
+  cursor: text;
+}
+.AddText{
+  position: absolute;
+  color: black;
+  text-align: center;
+  left: 25%;
+  width: 50%;
+  height: 65%;
+  font-size: 40px;
+  overflow: hidden;
+  font-family: Adventure;
+}
+.AddTextSettlementNPC{
+  position: absolute;
+  color: black;
+  text-align: center;
+  left: 25%;
+  width: 50%;
+  height: 65%;
+  font-size: 40px;
+  overflow: hidden;
+  font-family: Adventure;
+}
+.AddTextOrganization{
+  position: absolute;
+  color: black;
+  text-align: center;
+  left: 1%;
+  width: 98%;
+  height: 65%;
+  font-size:37px;
+  overflow: hidden;
+  font-family: Adventure;
+}
+.AddTextBuilding{
+  position: absolute;
+  color: black;
+  text-align: center;
+  left: 1%;
+  width: 98%;
+  height: 65%;
+  font-size: 42px;
+  overflow: hidden;
+  font-family: Adventure;
+}
+.AddTextCreateSettlement{
+  position: absolute;
+  color: black;
+  text-align: center;
+  left: 1%;
+  width: 98%;
+  height: 65%;
+  font-size: 40px;
+  overflow: hidden;
+  font-family: Adventure;
+}
+.AddTextSettlementOrganization{
+  position: absolute;
+  color: black;
+  text-align: center;
+  left: 1%;
+  width: 98%;
+  height: 70%;
+  font-size: 25px;
+  overflow: hidden;
+  font-family: Adventure;
+}
+.AddTextSettlementBuilding{
+  position: absolute;
+  color: black;
+  text-align: center;
+  left: 1%;
+  width: 98%;
+  height: 70%;
+  font-size: 30px;
+  overflow: hidden;
+  font-family: Adventure;
+}
+.GoBack {
+  color: white;
+  cursor: pointer;
+}
+.GoBackBook{
+  position: absolute;
+  border: 1px solid white;
+  text-align: center;
+  left: 1.5%;
+  width: 10%;
+  height: 6%;
+  top: .5%;
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+  font-size: 30px;
+  font-family: Adventure;
+  z-index: 2;
+  cursor: pointer;
+}
+.GoBackBookEncounter{
+  position: absolute;
+  border: 1px solid white;
+  text-align: center;
+  left: 2.5%;
+  width: 15%;
+  height: 6%;
+  top: 2.5%;
+  color: white;
+  font-size: 30px;
+  font-family: Adventure;
+  z-index: 2;
+  cursor: pointer;
+}
+.GoBackBookCreate{
+  position: absolute;
+  z-index: 2;
+  top: 2%;
+  left: 1.2%;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid white;
+  background-color: black;
+  color: white;
+}
+
+.BookPages {
+  height: 90%;
+  left: 5.6%;
+  position: absolute;
+  top: 5%;
+  width: 88.5%;
+}
+.BookPageLeft {
+  position: absolute;
+  top: 2%;
+  height: 96%;
+  width: 48%;
+  left: 1%;
+}
+.BookPageRight {
+  position: absolute;
+  top: 2%;
+  height: 96%;
+  width: 48%;
+  right: 1%;
+}
+.ViewPageDisplayImageHolder {
+  background-color: black;
+  display: table-cell;
+  height: 50%;
+  left: 2.5%;
+  position: absolute;
+  text-align: center;
+  top: 1%;
+  vertical-align: middle;
+  width: 95%;
+}
+.ViewPageDisplayImage {
+  margin: auto;
+  max-height: 100%;
+  max-width: 100%;
+  top: 1%;
+  color: white;
+}
+.ViewPageDisplayName {
+  height: 20%;
+  left: 5%;
+  position: absolute;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  top: 52.5%;
+  width: 90%;
+  font-size: 15px;
+}
+.ViewPageDisplayNameSettlementNPC{
+  height: 10%;
+  left: 5%;
+  position: absolute;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  top: 52.5%;
+  width: 90%;
+  font-size: 15px;
+}
+.ViewPageDisplayViewButton {
+  height: 15%;
+  left: 17.5%;
+  position: absolute;
+  top: 75%;
+  width: 25%;
+  
+}
+.ViewPageDisplayDeleteButton {
+  height: 15%;
+  position: absolute;
+  right: 20%;
+  text-align: center;
+  top: 75%;
+  vertical-align: middle;
+  width: 15%;
+  border-radius: 50%;
+  
+  color: white;
+  font-family: Edosz;
+  font-size: 20px;
+  min-height: 31px;
+  min-width: 31px;
+}
+.ViewPageDisplayDeleteButton:hover{
+  cursor: pointer;
+  
+}
+.EditCharacterHeaderText {
+  color: white;
+  left: 25%;
+  position: absolute;
+  text-align: center;
+  top: 0%;
+  width: 50%;
+}
+.EditCharacterRequired {
+  color: black;
+  position: absolute;
+  top: 5%;
+}
+.EditCharacterLeftSide {
+  border: 1px solid white;
+  float: left;
+  height: 87.5%;
+  margin-left: 2.5%;
+  overflow-x: auto;
+  position: relative;
+  top: 10%;
+  width: 45%;
+}
+.EditCharacterRightSide {
+  border: 1px solid white;
+  float: left;
+  height: 87.5%;
+  margin-left: 5%;
+  position: relative;
+  top: 10%;
+  width: 45%;
+}
+.EditCharacterName {
+  border-radius: 5px;
+  height: 5%;
+  left: 7.5%;
+  position: absolute;
+  text-align: center;
+  top: 9%;
+  width: 10%;
+}
+.EditCharacterText {
+  
+  font-size: 12px;
+  height: 40%;
+  left: 1%;
+  position: absolute;
+  text-align: center;
+  top: 0%;
+  width: 98%;
+}
+.EditCharacterPassivePerceptionText {
+  
+  font-size: 12px;
+  height: 40%;
+  left: 1%;
+  position: absolute;
+  text-align: center;
+  top: 0%;
+  width: 98%;
+}
+.EditCharacterInput {
+  border: 2px solid grey;
+  border-radius: 5px;
+  display: block;
+  font-size: 15px;
+  height: 50%;
+  position: absolute;
+  top: 45%;
+  width: 100%;
+}
+.EditCharacterSquareText {
+  display: block;
+  font-size: 11px;
+  height: 44%;
+  left: 5%;
+  position: absolute;
+  text-align: center;
+  top: 0%;
+  width: 90%;
+}
+.EditChallengeRatingText {
+  display: block;
+  font-size: 20px;
+  height: 44%;
+  left: 10%;
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  top: 0%;
+  width: 80%;
+}
+.EditChallengeRatingTextNPC {
+  display: block;
+  font-size: 14px;
+  height: 44%;
+  left: 10%;
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  top: 0%;
+  width: 80%;
+}
+.EditChallengeRatingInput {
+  border: 2px solid grey;
+  border-radius: 5px;
+  display: block;
+  font-size: 30px;
+  height: 50%;
+  left: 2.5%;
+  position: absolute;
+  text-align: center;
+  top: 46%;
+  width: 95%;
+}
+.EditCharacterSquareInput {
+  border: 2px solid grey;
+  border-radius: 5px;
+  display: block;
+  font-size: 15px;
+  height: 50%;
+  left: 2.5%;
+  position: absolute;
+  text-align: center;
+  top: 46%;
+  width: 95%;
+}
+
+.EditCharacterImage {
+  border-radius: 5px;
+  height: 20%;
+  left: 2.5%;
+  position: absolute;
+  top: 3%;
+  width: 27.5%;
+  overflow: ellipsis;
+}
+.EditCharacterImageHolder {
+  background-color: white;
+  border-radius: 5px;
+  color: black;
+  display: table-cell;
+  position: absolute;
+  text-align: center;
+  vertical-align: middle;
+  height: 73%;
+  left: 2.5%;
+  top: 25%;
+  width: 27.5%;
+}
+.EditSettlementImageHolder {
+  background-color: black;
+  border-radius: 5px;
+  color: white;
+  display: table-cell;
+  height: 16%;
+  left: 7%;
+  position: absolute;
+  text-align: center;
+  top: 35%;
+  vertical-align: middle;
+  width: 41.5%;
+}
+.EditCharacterImageDisplay {
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 100%;
+  max-width: 100%;
+  top: 1%;
+}
+.EditCharacterAge {
+  border-radius: 5px;
+  height: 20%;
+  left: 35%;
+  position: absolute;
+  top: 3%;
+  width: 15%;
+}
+.EditCharacterHeight {
+  border-radius: 5px;
+  height: 20%;
+  left: 57.5%;
+  position: absolute;
+  top: 3%;
+  width: 15%;
+}
+.EditCharacterWeight {
+  border-radius: 5px;
+  height: 20%;
+  left: 80%;
+  position: absolute;
+  top: 3%;
+  width: 15%;
+}
+.EditCharacterEyes {
+  border-radius: 5px;
+  height: 20%;
+  left: 35%;
+  position: absolute;
+  top: 25%;
+  width: 15%;
+}
+.EditCharacterSkin {
+  border-radius: 5px;
+  height: 20%;
+  left: 57.5%;
+  position: absolute;
+  top: 25%;
+  width: 15%;
+}
+.EditCharacterHair {
+  border-radius: 5px;
+  height: 20%;
+  left: 80%;
+  position: absolute;
+  top: 25%;
+  width: 15%;
+}
+.EditCharacterDescription {
+  border-radius: 5px;
+  height: 50%;
+  left: 35%;
+  position: absolute;
+  resize: none;
+  top: 48%;
+  width: 60%;
+}
+.EditMonsterDescription {
+  height: 95%;
+  left: 1%;
+  position: absolute;
+  resize: none;
+  top: 2.5%;
+  width: 95%;
+}
+.EditMonsterImageDescription {
+  height: 95%;
+  left: 35%;
+  position: absolute;
+  resize: none;
+  top: 2.5%;
+  width: 60%;
+}
+
+.EditCharacterClassAndLevel {
+  border-radius: 5px;
+  height: 5%;
+  left: 18%;
+  position: absolute;
+  text-align: center;
+  top: 9%;
+  width: 10%;
+}
+.EditCharacterBackground {
+  border-radius: 5px;
+  height: 5%;
+  left: 28.5%;
+  position: absolute;
+  text-align: center;
+  top: 9%;
+  width: 10%;
+}
+.EditCharacterPlayerName {
+  border-radius: 5px;
+  height: 5%;
+  left: 39%;
+  position: absolute;
+  text-align: center;
+  top: 9%;
+  width: 10%;
+}
+.EditCharacterChallengeRating {
+  border-radius: 5px;
+  height: 16%;
+  left: 39.2%;
+  position: absolute;
+  top: 9%;
+  width: 10%;
+}
+.EditNPCChallengeRating {
+  border-radius: 5px;
+  height: 11.5%;
+  left: 39.2%;
+  position: absolute;
+  top: 9%;
+  width: 10%;
+}
+.EditMonsterChallengeRating {
+  height: 16%;
+  left: 37%;
+  position: absolute;
+  top: 10%;
+  width: 10%;
+}
+.MonsterColor{
+  background-color: #da3de3;
+  border: 1px solid #910d98;
+}
+.CharacterColor{
+  background-color: #e85442;
+  border: 1px solid #9a2011;
+}
+.NPCColor{
+  background-color: #3195d7;
+  border: 1px solid #03548a;
+}
+.EditCharacterRace {
+  border-radius: 5px;
+  height: 5%;
+  left: 18%;
+  position: absolute;
+  text-align: center;
+  top: 14.5%;
+  width: 10%;
+}
+.EditCharacterAlignment {
+  border-radius: 5px;
+  height: 5%;
+  left: 28.5%;
+  position: absolute;
+  text-align: center;
+  top: 14.5%;
+  width: 10%;
+}
+.EditCharacterExperiencePoints {
+  border-radius: 5px;
+  height: 5%;
+  left: 39%;
+  position: absolute;
+  text-align: center;
+  top: 14.5%;
+  width: 10%;
+}
+.EditCharacterQualitiesText {
+  display: block;
+  font-size: 12px;
+  height: 25%;
+  left: 1%;
+  position: absolute;
+  text-align: center;
+  top: 0%;
+  width: 98%;
+}
+.EditCharacterQualitiesInput {
+  border: 1px solid grey;
+  border-radius: 5px;
+  display: block;
+  font-size: 14px;
+  font-size: 12px;
+  height: 65%;
+  left: 1%;
+  position: absolute;
+  resize: none;
+  top: 31%;
+  width: 98%;
+}
+.EditCharacterPersonalityTraits {
+  border-radius: 5px;
+  height: 24%;
+  left: 2.5%;
+  position: absolute;
+  top: 4%;
+  width: 95%;
+}
+.EditCharacterIdeals {
+  border-radius: 5px;
+  height: 24%;
+  left: 2.5%;
+  position: absolute;
+  top: 28%;
+  width: 95%;
+}
+.EditCharacterBonds {
+  border-radius: 5px;
+  height: 24%;
+  left: 2.5%;
+  position: absolute;
+  top: 52%;
+  width: 95%;
+}
+.EditCharacterFlaws {
+  border-radius: 5px;
+  height: 24%;
+  left: 2.5%;
+  position: absolute;
+  top: 76%;
+  width: 95%;
+}
+.EditCharacterBackstoryText {
+  height: 90%;
+  border-radius: 5px;
+  left: 5%;
+  position: absolute;
+  resize: none;
+  top: 5%;
+  width: 90%;
+}
+.EditCharacterEquipmentHolder {
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 29.5%;
+  left: 50.75%;
+  position: absolute;
+  top: 10%;
+  width: 41.5%;
+}
+.EditCharacterSpecialAbilitiesHolder {
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 41%;
+  left: 50.75%;
+  position: absolute;
+  top: 10%;
+  width: 41.5%;
+}
+.EditCharacterCopper {
+  border-radius: 5px;
+  height: 17.5%;
+  left: 2.5%;
+  position: absolute;
+  top: 2%;
+  width: 7.5%;
+}
+.EditCharacterSilver {
+  border-radius: 5px;
+  height: 17.5%;
+  left: 2.5%;
+  position: absolute;
+  top: 21%;
+  width: 7.5%;
+}
+.EditCharacterGold {
+  border-radius: 5px;
+  height: 17.5%;
+  left: 2.5%;
+  position: absolute;
+  top: 40%;
+  width: 7.5%;
+}
+.EditCharacterElectrum {
+  border-radius: 5px;
+  height: 17.5%;
+  left: 2.5%;
+  position: absolute;
+  top: 59%;
+  width: 7.5%;
+}
+.EditCharacterPlatinum {
+  border-radius: 5px;
+  height: 17.5%;
+  left: 2.5%;
+  position: absolute;
+  top: 78%;
+  width: 7.5%;
+}
+.EditCharacterEquipment {
+  border-radius: 5px;
+  height: 93%;
+  left: 15%;
+  position: absolute;
+  resize: none;
+  top: 2%;
+  width: 80%;
+}
+.EditCharacterEquipmentInput {
+  border: 1px solid grey;
+  border-radius: 5px;
+  display: block;
+  font-size: 12px;
+  height: 84%;
+  left: 1%;
+  position: absolute;
+  resize: none;
+  top: 12%;
+  width: 98%;
+}
+.EditCharacterEquipmentText {
+  display: block;
+  font-size: 14px;
+  height: 10%;
+  left: 1%;
+  position: absolute;
+  text-align: center;
+  top: 0%;
+  width: 98%;
+}
+.EditCharacterProficiencyBonus {
+  border-radius: 5px;
+  height: 5%;
+  left: 7.5%;
+  position: absolute;
+  text-align: center;
+  top: 14.5%;
+  width: 10%;
+}
+.EditCharacterSkills {
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 39%;
+  left: 7.5%;
+  overflow: auto;
+  position: absolute;
+  top: 21%;
+  width: 10%;
+}
+.EditMonsterSkills {
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 39%;
+  left: 7.5%;
+  overflow: auto;
+  position: absolute;
+  top: 15%;
+  width: 10%;
+}
+.EditCharacterSkillList {
+  height: 90%;
+  left: 2.5%;
+  overflow: auto;
+  position: absolute;
+  top: 7.5%;
+  width: 95%;
+}
+.EditCharacterSkillHolder {
+  height: 7%;
+  margin-left: 2.5%;
+  margin-top: 1%;
+  position: relative;
+  width: 95%;
+}
+.EditCharacterSkillHeaderText {
+  color: black;
+  font-size: 12px;
+  height: 5%;
+  left: 1%;
+  position: absolute;
+  text-align: center;
+  top: 0%;
+  width: 98%;
+}
+.EditCharacterSkillText {
+  color: black;
+  display: inline-block;
+  font-size: 10px;
+  height: 70%;
+  left: 12%;
+  overflow: hidden;
+  position: absolute;
+  text-overflow: clip;
+  top: 15%;
+  white-space: nowrap;
+  width: 70.5%;
+}
+.EditCharacterSkillCheckbox {
+  height: 50%;
+  position: absolute;
+  top: 25%;
+}
+.EditCharacterSkill {
+  top: 0%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+  width: 17.5%;
+}
+.EditCharacterPassivePerception {
+  border-radius: 5px;
+  height: 5%;
+  left: 7.5%;
+  position: absolute;
+  top: 61%;
+  width: 10%;
+}
+.EditCharacterOtherProficienciesAndLanguages {
+  border-radius: 5px;
+  height: 8%;
+  left: 18%;
+  position: absolute;
+  top: 46%;
+  width: 31%;
+}
+.EditCharacterOtherProficienciesAndLanguagesInput {
+  border: 2px solid grey;
+  border-radius: 5px;
+  display: block;
+  font-size: 12px;
+  height: 70%;
+  left: 0%;
+  position: absolute;
+  resize: none;
+  top: 26%;
+  width: 100%;
+}
+.EditCharacterOtherProficienciesAndLanguagesText {
+  
+  font-size: 14px;
+  height: 25%;
+  left: 1%;
+  position: absolute;
+  text-align: center;
+  top: 0%;
+  width: 98%;
+}
+.EditCharacterHitPointsHolder {
+  height: 8%;
+  left: 14%;
+  position: absolute;
+  top: 20%;
+  width: 4.5%;
+}
+.EditCharacterHitDiceHolder {
+  height: 8%;
+  left: 19.7%;
+  position: absolute;
+  top: 20%;
+  width: 4.5%;
+}
+.EditCharacterArmorClassHolder {
+  height: 8%;
+  left: 25.4%;
+  position: absolute;
+  top: 20%;
+  width: 4.5%;
+}
+.EditCharacterSpeedHolder {
+  height: 8%;
+  left: 31.1%;
+  position: absolute;
+  top: 20%;
+  width: 4.5%;
+}
+.EditCharacterInitiativeHolder {
+  height: 8%;
+  left: 36.8%;
+  position: absolute;
+  top: 20%;
+  width: 4.5%;
+}
+.EditCharacterInspirationHolder {
+  height: 8%;
+  left: 42.5%;
+  position: absolute;
+  top: 20%;
+  width: 4.5%;
+}
+.EditCharacterHitPoints {
+  border-radius: 5px;
+  height: 7%;
+  left: 18%;
+  position: absolute;
+  top: 20%;
+  width: 4.5%;
+}
+.EditCharacterHitDice {
+  border-radius: 5px;
+  height: 7%;
+  left: 23.3%;
+  position: absolute;
+  top: 20%;
+  width: 4.5%;
+}
+.EditCharacterArmorClass {
+  border-radius: 5px;
+  height: 7%;
+  left: 28.6%;
+  position: absolute;
+  top: 20%;
+  width: 4.5%;
+}
+.EditCharacterSpeed {
+  border-radius: 5px;
+  height: 7%;
+  left: 33.9%;
+  position: absolute;
+  top: 20%;
+  width: 4.5%;
+}
+.EditCharacterInitiative {
+  border-radius: 5px;
+  height: 7%;
+  left: 39.2%;
+  position: absolute;
+  top: 20%;
+  width: 4.5%;
+}
+.EditCharacterInspiration {
+  border-radius: 5px;
+  height: 7%;
+  left: 44.5%;
+  position: absolute;
+  top: 20%;
+  width: 4.5%;
+}
+.EditCharacterMiscHolder {
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 28%;
+  left: 7.5%;
+  position: absolute;
+  top: 67%;
+  width: 41.5%;
+}
+.ShowCharacterSection {
+  height: 90%;
+  overflow: auto;
+  position: absolute;
+  top: 10%;
+  width: 100%;
+}
+.ShowSettlementSection {
+  height: 95%;
+  position: absolute;
+  top: 5%;
+  width: 100%;
+}
+.HideCharacterSection {
+  display: none;
+}
+.EditCharacterAppearance {
+  border: 2px solid black;
+  border-top-left-radius: 5px;
+  display: inline-block;
+  height: 10%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  line-height: 100%;
+  width: 33%;
+}
+.EditCharacterQualities {
+  border: 2px solid black;
+  display: inline-block;
+  height: 10%;
+  left: 0%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 33%;
+  line-height: 100%;
+}
+.EditCharacterBackstory {
+  border: 2px solid black;
+  border-top-right-radius: 5px;
+  display: inline-block;
+  height: 10%;
+  left: 0%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 34%;
+  line-height: 100%;
+}
+
+.EditSettlementNPCs {
+  border: 2px solid black;
+  border-top-left-radius: 5px;
+  display: inline-block;
+  height: 5%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 33%;
+}
+.EditSettlementOrganizations {
+  border: 2px solid black;
+  display: inline-block;
+  height: 5%;
+  left: 0%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 33%;
+}
+.EditSettlementBuildings {
+  border: 2px solid black;
+  border-top-right-radius: 5px;
+  display: inline-block;
+  height: 5%;
+  left: 0%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 34%;
+}
+.EditCharacterFactions {
+  border-radius: 5px;
+  height: 9%;
+  left: 50.75%;
+  position: absolute;
+  resize: none;
+  top: 42%;
+  width: 41.5%;
+}
+.EditCharacterCombatHolder {
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 42%;
+  left: 50.75%;
+  position: absolute;
+  resize: none;
+  top: 53%;
+  width: 41.5%;
+}
+.EditCharacterActions {
+  border: 2px solid black;
+  border-top-left-radius: 5px;
+  display: inline-block;
+  height: 8%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 33%;
+}
+.EditCharacterSpells {
+  border: 2px solid black;
+  display: inline-block;
+  height: 8%;
+  left: 0%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 33%;
+  
+}
+.EditCharacterSpellLevelDisplayText {
+  left: 0%;
+  position: absolute;
+  top: 0%;
+}
+.EditCharacterSpellMinimized {
+  border: 1px solid black;
+  border-radius: 5px;
+  display: inline-block;
+  height: 20%;
+  left: 1%;
+  position: relative;
+  top: 15%;
+  width: 98%;
+}
+.EditCharacterSpellMinimize {
+  color: white;
+  
+  left: 60%;
+  position: absolute;
+  top: 22%;
+  width: 5%;
+}
+.EditCharacterSpellSlot {
+  height: 15%;
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  width: 40%;
+}
+.EditCharacterSpellMaximized {
+  height: 100%;
+  min-width: 300px;
+  left: 0%;
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  z-index: 5;
+}
+.EditCharacterSpellNameMinimized {
+  border-radius: 5px;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  width: 55%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.EditCharacterSpellMaximizeRemoveHolder{
+  height: 98%;
+  left: 60%;
+  top: 1%;
+  position: absolute;
+  z-index: 2;
+  width: 40%;
+}
+.EditCharacterSpellMaximize {
+  color: black;
+  
+  width: 50%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+}
+.EditCharacterFeatures {
+  border: 2px solid black;
+  border-top-right-radius: 5px;
+  display: inline-block;
+  height: 8%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 34%;
+}
+.ShowCombatHolder {
+  height: 92%;
+  overflow: auto;
+  position: absolute;
+  top: 8%;
+  width: 100%;
+}
+.EditCharacterStrengthSave {
+  border-radius: 5px;
+  height: 8%;
+  left: 18%;
+  position: absolute;
+  top: 27%;
+  width: 4.5%;
+}
+.EditCharacterDexteritySave {
+  border-radius: 5px;
+  height: 8%;
+  left: 23.3%;
+  position: absolute;
+  top: 27%;
+  width: 4.5%;
+}
+.EditCharacterConstitutionSave {
+  border-radius: 5px;
+  height: 8%;
+  left: 28.6%;
+  position: absolute;
+  top: 27%;
+  width: 4.5%;
+}
+.EditCharacterIntelligenceSave {
+  border-radius: 5px;
+  height: 8%;
+  left: 33.9%;
+  position: absolute;
+  top: 27%;
+  width: 4.5%;
+}
+.EditCharacterWisdomSave {
+  border-radius: 5px;
+  height: 8%;
+  left: 39.2%;
+  position: absolute;
+  top: 27%;
+  width: 4.5%;
+}
+.EditCharacterCharismaSave {
+  border-radius: 5px;
+  height: 8%;
+  left: 44.5%;
+  position: absolute;
+  top: 27%;
+  width: 4.5%;
+}
+.EditCharacterStrength {
+  left: 14%;
+  position: absolute;
+  top: 78%;
+  width: 4.5%;
+}
+.EditCharacterDexterity {
+  left: 19.7%;
+  position: absolute;
+  top: 78%;
+  width: 4.5%;
+}
+.EditCharacterConstitution {
+  left: 25.4%;
+  position: absolute;
+  top: 78%;
+  width: 4.5%;
+}
+.EditCharacterIntelligence {
+  left: 31.1%;
+  position: absolute;
+  top: 78%;
+  width: 4.5%;
+}
+.EditCharacterWisdom {
+  left: 36.8%;
+  position: absolute;
+  top: 78%;
+  width: 4.5%;
+}
+.EditCharacterCharisma {
+  left: 42.5%;
+  position: absolute;
+  top: 78%;
+  width: 4.5%;
+}
+.EditCharacterStrengthDisplay {
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 12px;
+  height: 8%;
+  left: 18%;
+  position: absolute;
+  text-align: center;
+  top: 36%;
+  width: 4.5%;
+}
+.EditCharacterDexterityDisplay {
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 12px;
+  height: 8%;
+  left: 23.3%;
+  position: absolute;
+  text-align: center;
+  top: 36%;
+  width: 4.5%;
+}
+.EditCharacterConstitutionDisplay {
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 12px;
+  height: 8%;
+  left: 28.6%;
+  position: absolute;
+  text-align: center;
+  top: 36%;
+  width: 4.5%;
+}
+.EditCharacterIntelligenceDisplay {
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 12px;
+  height: 8%;
+  left: 33.9%;
+  position: absolute;
+  text-align: center;
+  top: 36%;
+  width: 4.5%;
+}
+.EditCharacterWisdomDisplay {
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 12px;
+  height: 8%;
+  left: 39.2%;
+  position: absolute;
+  text-align: center;
+  top: 36%;
+  width: 4.5%;
+}
+.EditCharacterCharismaDisplay {
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 12px;
+  height: 8%;
+  left: 44.5%;
+  position: absolute;
+  text-align: center;
+  top: 36%;
+  width: 4.5%;
+}
+.EditCharacterDamageVulnerabilities {
+  border-radius: 5px;
+  height: 5%;
+  left: 18%;
+  position: absolute;
+  top: 55%;
+  width: 15%;
+}
+.EditCharacterDamageResistances {
+  border-radius: 5px;
+  height: 5%;
+  left: 34%;
+  position: absolute;
+  top: 55%;
+  width: 15%;
+}
+.EditCharacterDamageImmunities {
+  border-radius: 5px;
+  height: 5%;
+  left: 18%;
+  position: absolute;
+  top: 61%;
+  width: 15%;
+}
+.EditCharacterConditionImmunities {
+  border-radius: 5px;
+  height: 5%;
+  left: 34%;
+  position: absolute;
+  top: 61%;
+  width: 15%;
+}
+.EditCharacterAddFeature {
+  border: 1px solid black;
+  color: black;
+  color: white;
+  
+  font-size: 20px;
+  height: 15%;
+  left: 0%;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+.EditCharacterFeatureDisplay {
+  border: 1px solid white;
+  height: 20%;
+  overflow: auto;
+  position: absolute;
+  right: 2.5%;
+  top: 10%;
+  width: 45%;
+}
+.EditCharacterFeature {
+  height: 20%;
+  margin-left: 0%;
+  margin-top: 0%;
+  position: relative;
+  width: 100%;
+}
+.EditCharacterFeatureName {
+  height: 40%;
+  left: 1%;
+  position: absolute;
+  top: 30%;
+  width: 15%;
+}
+.EditCharacterFeatureDescription {
+  height: 98%;
+  left: 17%;
+  position: absolute;
+  resize: none;
+  top: 1%;
+  width: 82.5%;
+}
+.EditCharacterFeatureRemove {
+  color: black;
+  
+  height: 30%;
+  right: 0%;
+  position: absolute;
+  top: 1%;
+  width: 5%;
+  z-index: 2;
+}
+.EditCharacterFeatureRemove:hover{
+  background-color: red;
+  color: white;
+}
+.EditCharacterAddAction {
+  border: 1px solid black;
+  color: black;
+  
+  font-size: 20px;
+  height: 15%;
+  left: 0%;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+  cursor: pointer;
+}
+.EditCharacterAddAction:hover{
+  background-color:black;
+  color: white
+}
+.CenteredImage{
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+  cursor: pointer;
+}
+.CenteredImageNoPointer{
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+}
+.LowerCenteredImage{
+  display: table;
+  text-align: center;
+  position: relative;
+  vertical-align: middle;
+  width: 30%;
+  margin: 0 auto;
+ height: 100%;
+ min-height: 60px;
+ min-width: 60px;
+}
+.LowerCenteredImageHolder{
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  left: 0%;
+ top: 65%;
+ height: 30%;
+ min-height: 60px;
+}
+.LowerCenteredImageSettlement{
+  display: table;
+  text-align: center;
+  position: absolute;
+  vertical-align: middle;
+  left: 35%;
+  width: 30%;
+ bottom: 5%;
+ height: 30%;
+}
+.CursorPointer{
+  cursor: pointer;
+}
+.CenteredPlus {
+  position: relative;
+  float: left;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  color: black;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.CenteredPlusNoColor {
+  position: relative;
+  float: left;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+.CenteredPlusNoColorLogin {
+  position: relative;
+  float: left;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  border: none;
+  background-color: green;
+}
+.CenteredNoPointer{
+  position: relative;
+  float: left;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.EditCharacterSpellcastingText {
+  display: block;
+  font-size: 10px;
+  height: 30%;
+  left: 1%;
+  position: absolute;
+  text-align: center;
+  top: -5%;
+  width: 98%;
+}
+.EditCharacterSpellcastingInput {
+  border: 2px solid grey;
+  border-radius: 5px;
+  display: block;
+  font-size: 12px;
+  height: 60%;
+  position: absolute;
+  top: 35%;
+  width: 100%;
+}
+.EditCharacterSpellcastingAbility {
+  border: 1px solid black;
+  height: 10%;
+  left: 41%;
+  position: absolute;
+  top: 1%;
+  width: 17.5%;
+}
+.EditCharacterSpellSaveDC {
+  border: 1px solid black;
+  height: 10%;
+  left: 60.5%;
+  position: absolute;
+  top: 1%;
+  width: 17.5%;
+}
+.EditCharacterSpellAttackBonus {
+  border: 1px solid black;
+  height: 10%;
+  left: 80%;
+  position: absolute;
+  top: 1%;
+  width: 17.5%;
+}
+.EditCharacterActionDisplay {
+  border: 1px solid white;
+  height: 85%;
+  left: 0%;
+  overflow: auto;
+  position: absolute;
+  top: 10%;
+  width: 100%;
+}
+.EditCharacterActionRemove {
+  color: black;
+  
+  height: 30%;
+  right: 0%;
+  position: absolute;
+  top: 1%;
+  width: 3%;
+  z-index: 2;
+  border-right: none;
+  border-top: none;
+}
+.EditCharacterActionRemove:hover{
+  color: white;
+  background-color: red;
+}
+.EditCharacterAction {
+  height: 20%;
+  margin-left: 0%;
+  margin-top: 0%;
+  position: relative;
+  width: 100%;
+}
+.EditStockNameLabel {
+  border: 1px solid black;
+  height: 15%;
+  left: 0%;
+  position: absolute;
+  text-align: center;
+  width: 20%;
+}
+.EditStockPriceLabel {
+  border: 1px solid black;
+  height: 15%;
+  left: 20%;
+  position: absolute;
+  text-align: center;
+  width: 10%;
+}
+.EditStockDescriptionLabel {
+  border: 1px solid black;
+  height: 15%;
+  left: 30%;
+  position: absolute;
+  text-align: center;
+  width: 70%;
+}
+.EditCharacterActionNameLabel {
+  border: 1px solid black;
+  height: 15%;
+  left: 0%;
+  position: absolute;
+  text-align: center;
+  width: 18.5%;
+  text-overflow: ellipsis;
+ overflow:hidden;
+ 
+}
+.EditCharacterActionAttackBonusLabel {
+  border: 1px solid black;
+  height: 15%;
+  left: 18.5%;
+  position: absolute;
+  text-align: center;
+  width: 10%;
+  text-overflow: ellipsis;
+ overflow:hidden;
+
+}
+.EditCharacterActionDamageDiceLabel {
+  border: 1px solid black;
+  height: 15%;
+  left: 28.5%;
+  position: absolute;
+  text-align: center;
+  width: 10%;
+  text-overflow: ellipsis;
+ overflow:hidden;
+
+}
+.EditCharacterActionDamageBonusLabel {
+  border: 1px solid black;
+  height: 15%;
+  left: 38.5%;
+  position: absolute;
+  text-align: center;
+  width: 10%;
+ font-size: 15px;
+ text-overflow: ellipsis;
+ overflow:hidden;
+ 
+}
+.EditCharacterActionDescriptionLabel {
+  border: 1px solid black;
+  height: 15%;
+  left: 48.5%;
+  position: absolute;
+  text-align: center;
+  width: 51.5%;
+
+}
+.EditCharacterFeatureNameLabel {
+  border: 1px solid black;
+  height: 15%;
+  left: 0%;
+  position: absolute;
+  text-align: center;
+  width: 20%;
+}
+.EditCharacterFeatureDescriptionLabel {
+  border: 1px solid black;
+  height: 15%;
+  left: 20%;
+  position: absolute;
+  text-align: center;
+  width: 80%;
+}
+.EditMonsterDescriptionLabel {
+  border: 1px solid black;
+  height: 15%;
+  left: 0%;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+.EditCharacterActionMakeSpace {
+  display: block;
+  height: 15%;
+  position: relative;
+  z-index: -1;
+}
+.EditCharacterActionName {
+  height: 50%;
+  left: 2.5%;
+  position: absolute;
+  top: 25%;
+  width: 95%;
+}
+.EditCharacterActionAttackBonus {
+  height: 50%;
+  left: 2.5%;
+  position: absolute;
+  top: 25%;
+  width: 95%;
+}
+.EditCharacterActionDamageDice {
+  height: 50%;
+  left: 2.5%;
+  position: absolute;
+  top: 25%;
+  width: 95%;
+}
+.EditCharacterActionDamageBonus {
+  height: 50%;
+  left: 2.5%;
+  position: absolute;
+  top: 25%;
+  width: 95%;
+}
+.EditCharacterActionDescription {
+  height: 95%;
+  left: 1%;
+  position: absolute;
+  resize: none;
+  top: 2.5%;
+  width: 93%;
+}
+.EditCharacterActionNameHolder {
+  border: 1px solid black;
+  height: 100%;
+  left: 0%;
+  position: absolute;
+  top: 0%;
+  width: 18.5%;
+}
+.EditCharacterActionAttackBonusHolder {
+  border: 1px solid black;
+  height: 100%;
+  left: 18.5%;
+  position: absolute;
+  top: 0%;
+  width: 10%;
+}
+.EditCharacterActionDamageDiceHolder {
+  border: 1px solid black;
+  height: 100%;
+  left: 28.5%;
+  position: absolute;
+  top: 0%;
+  width: 10%;
+}
+.EditCharacterActionDamageBonusHolder {
+  border: 1px solid black;
+  height: 100%;
+  left: 38.5%;
+  position: absolute;
+  top: 0%;
+  width: 10%;
+}
+.EditCharacterActionDescriptionHolder {
+  border: 1px solid black;
+  height: 100%;
+  left: 48.5%;
+  position: absolute;
+  resize: none;
+  top: 0%;
+  width: 51.5%;
+}
+.EditCharacterFeatureNameHolder {
+  border: 1px solid black;
+  height: 100%;
+  left: 0%;
+  position: absolute;
+  top: 0%;
+  width: 20%;
+}
+.EditCharacterFeatureDescriptionHolder {
+  border: 1px solid black;
+  height: 100%;
+  left: 20%;
+  position: absolute;
+  top: 0%;
+  width: 80%;
+}
+.EditCharacterAddSpell {
+  border: 1px solid black;
+  color: black;
+  
+  height: 10%;
+  left: 2%;
+  position: absolute;
+  top: 1%;
+  width: 37%;
+  cursor: pointer;
+}
+.EditCharacterAddSpell:hover{
+  color: white;
+  background-color: black;
+}
+.EditCharacterAddSpellNameText {
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  height: 7.5%;
+  left: 0%;
+  position: absolute;
+  text-align: center;
+  top: 7.5%;
+  width: 25%;
+}
+.EditCharacterAddSpellLevelText {
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  height: 7.5%;
+  left: 0%;
+  position: absolute;
+  text-align: center;
+  top: 15%;
+  width: 25%;
+}
+.EditCharacterAddSpellSchoolText {
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  height: 7.5%;
+  left: 0%;
+  position: absolute;
+  text-align: center;
+  top: 22.5%;
+  width: 25%;
+}
+.EditCharacterAddSpellCastingTimeText {
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  height: 7.5%;
+  left: 0%;
+  position: absolute;
+  text-align: center;
+  top: 30%;
+  width: 25%;
+}
+.EditCharacterAddSpellRangeText {
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  height: 7.5%;
+  left: 0%;
+  position: absolute;
+  text-align: center;
+  top: 37.5%;
+  width: 25%;
+}
+.EditCharacterAddSpellComponentsText {
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  height: 7.5%;
+  left: 0%;
+  position: absolute;
+  text-align: center;
+  top: 45%;
+  width: 25%;
+}
+.EditCharacterAddSpellDurationText {
+  background-color: black;
+  border: 1px solid white;
+  color: white;
+  height: 7.5%;
+  left: 0%;
+  position: absolute;
+  text-align: center;
+  top: 52.5%;
+  width: 25%;
+}
+.EditCharacterAddSpellName {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  height: 7.5%;
+  left: 25%;
+  position: absolute;
+  top: 7.5%;
+  width: 75%;
+}
+.EditCharacterAddSpellLevel {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  height: 7.5%;
+  left: 25%;
+  position: absolute;
+  top: 15%;
+  width: 75%;
+}
+.EditCharacterAddSpellSchool {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  height: 7.5%;
+  left: 25%;
+  position: absolute;
+  top: 22.5%;
+  width: 75%;
+}
+.EditCharacterAddSpellCastingTime {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  height: 7.5%;
+  left: 25%;
+  position: absolute;
+  top: 30%;
+  width: 75%;
+}
+.EditCharacterAddSpellRange {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  height: 7.5%;
+  left: 25%;
+  position: absolute;
+  top: 37.5%;
+  width: 75%;
+}
+.EditCharacterAddSpellComponents {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  height: 7.5%;
+  left: 25%;
+  position: absolute;
+  top: 45%;
+  width: 75%;
+}
+.EditCharacterAddSpellDuration {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  height: 7.5%;
+  left: 25%;
+  position: absolute;
+  top: 52.5%;
+  width: 75%;
+}
+.EditCharacterAddSpellDescription {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  height: 40%;
+  left: 0%;
+  position: absolute;
+
+  resize: none;
+  top: 60%;
+  width: 100%;
+}
+.EditCharacterAddSpellMinimize {
+  color: white;
+  
+  font-size: 15px;
+  left: 90%;
+  position: absolute;
+  text-align: center;
+  top: 0%;
+  width: 5%;
+  cursor: pointer;
+}
+.EditCharacterAddSpellMinimize:hover{
+  background-color: black;
+}
+.EditCharacterAddSpellButton {
+  color: white;
+  
+  font-size: 20px;
+  left: 95%;
+  height: 7%;
+  position: absolute;
+  top: 0%;
+  width: 5%;
+}
+.EditCharacterAddSpellButton:hover{
+  background-color: green;
+}
+.EditCharacterRemoveSpellButton {
+  color: white;
+  
+  font-size: 15px;
+  left: 95%;
+  height: 7%;
+  position: absolute;
+  top: 0%;
+  width: 5%;
+}
+.EditCharacterRemoveSpellButton:hover{
+  background-color: red;
+}
+.EditCharacterSpellDisplay {
+  border: 1px solid black;
+  height: 32.5%;
+  overflow: auto;
+  position: absolute;
+  right: 2.5%;
+  top: 65%;
+  width: 45%;
+}
+.EditCharacterSpell {
+  border: 1px solid yellow;
+  display: inline-block;
+  height: 70%;
+  margin-left: 1%;
+  position: relative;
+  text-align: center;
+  top: 15%;
+  width: 45%;
+}
+.EditCharacterCantrips {
+  border: 1px solid black;
+  height: 40%;
+  left: 2%;
+  overflow: auto;
+  position: absolute;
+  top: 12.5%;
+  width: 17.5%;
+}
+.EditCharacterFirstLevelSpells {
+  border: 1px solid black;
+  height: 40%;
+  left: 2%;
+  overflow: auto;
+  position: absolute;
+  top: 55%;
+  width: 17.5%;
+}
+.EditCharacterSecondLevelSpells {
+  border: 1px solid black;
+  height: 40%;
+  left: 21.5%;
+  overflow: auto;
+  position: absolute;
+  top: 12.5%;
+  width: 17.5%;
+}
+.EditCharacterThirdLevelSpells {
+  border: 1px solid black;
+  height: 40%;
+  left: 21.5%;
+  overflow: auto;
+  position: absolute;
+  top: 55%;
+  width: 17.5%;
+}
+.EditCharacterFourthLevelSpells {
+  border: 1px solid black;
+  height: 40%;
+  left: 41%;
+  overflow: auto;
+  position: absolute;
+  top: 12.5%;
+  width: 17.5%;
+}
+.EditCharacterFifthLevelSpells {
+  border: 1px solid black;
+  height: 40%;
+  left: 41%;
+  overflow: auto;
+  position: absolute;
+  top: 55%;
+  width: 17.5%;
+}
+.EditCharacterSixthLevelSpells {
+  border: 1px solid black;
+  height: 40%;
+  left: 60.5%;
+  overflow: auto;
+  position: absolute;
+  top: 12.5%;
+  width: 17.5%;
+}
+.EditCharacterSeventhLevelSpells {
+  border: 1px solid black;
+  height: 40%;
+  left: 60.5%;
+  overflow: auto;
+  position: absolute;
+  top: 55%;
+  width: 17.5%;
+}
+.EditCharacterEighthLevelSpells {
+  border: 1px solid black;
+  height: 40%;
+  left: 80%;
+  overflow: auto;
+  position: absolute;
+  top: 12.5%;
+  width: 17.5%;
+}
+.EditCharacterNinthLevelSpells {
+  border: 1px solid black;
+  height: 40%;
+  left: 80%;
+  overflow: auto;
+  position: absolute;
+  top: 55%;
+  width: 17.5%;
+}
+.EditCharacterSpellRemove {
+  color: black;
+  
+  width: 45%;
+  height: 100%;
+  top: 0%;
+  left: 55%;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+}
+.EditCharacterSubmitButton {
+  height: 6.5%;
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  width: 10%;
+}
+.EditMonsterInformation {
+  height: 13%;
+  left: 14%;
+  overflow: auto;
+  position: absolute;
+  resize: none;
+  top: 15%;
+  width: 33%;
+}
+.EditMonsterSenses {
+  border-radius: 5px;
+  height: 8%;
+  left: 14%;
+  position: absolute;
+  resize: none;
+  top: 50.5%;
+  width: 33%;
+}
+.EditMonsterLanguages {
+  border-radius: 5px;
+  height: 11%;
+  left: 7.5%;
+  position: absolute;
+  resize: none;
+  top: 55%;
+  width: 10%;
+}
+.EditMonsterAddLairAction {
+  color: white;
+  left: 14%;
+  position: absolute;
+  top: 39.5%;
+}
+.EditMonsterLairActionDisplay {
+  border: 1px solid white;
+  height: 10%;
+  left: 14%;
+  overflow: auto;
+  position: absolute;
+  resize: none;
+  top: 42%;
+  width: 33%;
+}
+.EditMonsterAddRegionalEffect {
+  color: white;
+  left: 14%;
+  position: absolute;
+  top: 52%;
+}
+.EditMonsterRegionalEffectDisplay {
+  border: 1px solid white;
+  height: 10%;
+  left: 14%;
+  overflow: auto;
+  position: absolute;
+  resize: none;
+  top: 56.5%;
+  width: 33%;
+}
+.EditCharacterEffectDescription {
+  height: 98%;
+  left: 1%;
+  overflow: auto;
+  position: absolute;
+  resize: none;
+  top: 1%;
+  width: 98%;
+}
+.EditMonsterAlignment {
+  left: 2.5%;
+  position: absolute;
+  top: 15%;
+  width: 10%;
+}
+.EditMonsterImage {
+  left: 2.5%;
+  position: absolute;
+  top: 20%;
+  width: 10%;
+}
+.EditMonsterImageHolder {
+  background-color: black;
+  border: 1px solid yellow;
+  color: white;
+  display: table-cell;
+  height: 30.5%;
+  left: 2.5%;
+  position: absolute;
+  text-align: center;
+  top: 25%;
+  vertical-align: middle;
+  width: 10%;
+}
+.EditMonsterAddSpecialAbility {
+  color: black;
+  left: 0%;
+  position: absolute;
+  top: 1%;
+}
+.EditMonsterSpecialAbilityDisplay {
+  border: 1px solid white;
+  height: 25%;
+  left: 2.5%;
+  overflow: auto;
+  position: relative;
+  top: 5%;
+  width: 95%;
+}
+.EditMonsterAddLegendaryAction {
+  color: white;
+  left: 52.5%;
+  position: absolute;
+  top: 25%;
+}
+.EditMonsterLegendaryActionDisplay {
+  border: 1px solid white;
+  height: 15%;
+  overflow: auto;
+  position: absolute;
+  right: 2.5%;
+  top: 27%;
+  width: 45%;
+}
+.EditMonsterAddAction {
+  color: white;
+  left: 52.5%;
+  position: absolute;
+  top: 42%;
+}
+.EditMonsterActionDisplay {
+  border: 1px solid white;
+  height: 15%;
+  overflow: auto;
+  position: absolute;
+  right: 2.5%;
+  top: 44%;
+  width: 45%;
+}
+.EditNPCDescription {
+  height: 6.5%;
+  left: 14%;
+  position: absolute;
+  resize: none;
+  top: 15%;
+  width: 33%;
+}
+.EditNPCInformation {
+  border-radius: 5px;
+  height: 40%;
+  left: 2.5%;
+  position: absolute;
+  top: 6%;
+  width: 95%;
+}
+.EditNPCBehavior {
+  border-radius: 5px;
+  height: 40%;
+  left: 2.5%;
+  position: absolute;
+  resize: none;
+  top: 54%;
+  width: 95%;
+}
+.EditNPCEquipment {
+  height: 11.5%;
+  left: 14%;
+  position: absolute;
+  resize: none;
+  top: 39%;
+  width: 33%;
+}
+.AddNPCCloseButton {
+  border-radius: 5px;
+  position: absolute;
+  right: -5%;
+  
+  text-align: center;
+  top: -1%;
+  height: 38px;
+  width: 40px;
+}
+
+.SettlementAddNPCHidden {
+  display: none;
+}
+.AddNPCOptionsHolder {
+  background-color: white;
+  height: 70%;
+  left: 25%;
+  overflow: auto;
+  position: fixed;
+  top: 15%;
+  width: 50%;
+}
+.AddNPCOptionAddButton {
+  
+  left: 40%;
+  position: absolute;
+  height: 20%;
+  top: 70%;
+  width: 20%;
+}
+.AddNPCOption {
+  border: 1px solid black;
+  bottom: 2.5%;
+  float: left;
+  height: 30%;
+  margin-left: 2.5%;
+  margin-top: 1%;
+  position: relative;
+  text-align: center;
+  width: 30%;
+}
+.SettlementCreateNPCHidden {
+  display: none;
+}
+.SettlementCreateNPC {
+  height: 100%;
+  left: 0%;
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  z-index: 51;
+}
+.EditSettlementHolder {
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 84.75%;
+  left: 51.25%;
+  position: absolute;
+  resize: none;
+  top: 10%;
+  width: 40.5%;
+}
+.WizardHolder{
+  position: absolute;
+  height: 500px;
+  width:300px;
+  top: 20%;
+  left: 300px;
+}
+.SettlementTutorialPane{
+  position: absolute;
+  background-color: white;
+  border-radius: 5px;
+  left: 200px;
+  width: 700px;
+  height: 200px;
+  top: 175px;
+}
+.Encounter1{
+  position: absolute;
+  background-color: white;
+  border-radius: 5px;
+  left: 600px;
+  width: 700px;
+  height: 200px;
+  top: 175px;
+}
+.Encounter2{
+  position: absolute;
+  background-color: white;
+  border-radius: 5px;
+  left: 600px;
+  width: 700px;
+  height: 300px;
+  top: 75px;
+}
+.Encounter3{
+  position: absolute;
+  background-color: white;
+  border-radius: 5px;
+  left: 600px;
+  width: 700px;
+  height: 150px;
+  top: 225px;
+}
+
+.SettlementTutorialPaneTriangle{
+  position: absolute;
+  transform:rotate(45deg);
+  background-color: white;
+  width: 10px;
+  height: 10px;
+  top: 370px;
+  left: 630px;
+}
+.SettlementTutorialClose{
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  width: 2%;
+  height: 20px;
+  
+}
+.SettlementTutorialClose:hover{
+  color: white;
+  background-color: red;
+}
+.SettlementTutorialText{
+  position: absolute;
+  width: 95%;
+  height: 80%;
+  top: 10px;
+  left: 2.5%;
+}
+.SettlementTutorialNumber{
+  position: absolute;
+  
+  right: 25px;
+  bottom: 0px;
+  height: 30px;
+}
+.SettlementTutorialNextButton{
+  position: absolute;
+  
+  right: 7.5px;
+  bottom: 0px;
+  height: 30px;
+}
+.SettlementTutorialPreviousButton{
+  position: absolute;
+  
+  right: 60px;
+  bottom: 0px;
+  height: 30px;
+}
+.SettlementTutorialCheckboxHolder{
+  position: absolute;
+  left: 2.5%;
+  
+  width: 50%;
+  bottom: 0px;
+  height: 30px;
+}
+.SettlementTutorialCheckbox{
+  position: absolute;
+  left: 0%;
+  top: 5px;
+}
+.SettlementTutorialCheckboxText{
+  position: absolute;
+  left: 5%;
+
+}
+.EditCharacterConditionHolder {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 7%;
+  left: 10%;
+  position: absolute;
+  top: 0%;
+  width: 80%;
+}
+.EditCharacterCondition {
+  float: left;
+  height: 100%;
+  position: relative;
+  width: 6.25%;
+}
+.EditCharacterConditionInput {
+  border: 1px solid black;
+  float: right;
+  height: 50%;
+  position: relative;
+  right: 5%;
+  top: 25%;
+  width: 25%;
+}
+.EditCharacterMinimizeButton {
+  color: white;
+  left: 0%;
+  position: absolute;
+  top: 0%;
+}
+.QuestHolder {
+  height: 80%;
+  left: 25%;
+  position: absolute;
+  top: 10%;
+  width: 50%;
+}
+.EditQuestName {
+  height: 10%;
+  left: 10%;
+  position: absolute;
+  top: 2.5%;
+  width: 80%;
+}
+.QuestNameError {
+  color: red;
+  font-size: 8px;
+  left: 10%;
+  position: absolute;
+  text-align: center;
+  top: 12%;
+  vertical-align: text-top;
+  width: 80%;
+}
+.EditQuestImage {
+  height: 5%;
+  left: 10%;
+  position: absolute;
+  top: 15%;
+  width: 80%;
+}
+.EditQuestImageClick{
+  width: 100%;
+}
+.EditQuestImageHolder {
+  background-color: black;
+  border-radius: 5px;
+  color: white;
+  display: table-cell;
+  height: 23%;
+  left: 10%;
+  position: absolute;
+  text-align: center;
+  top: 21%;
+  vertical-align: middle;
+  width: 80%;
+}
+.EditQuestDescription {
+  height: 20%;
+  left: 10%;
+  position: absolute;
+  top: 75%;
+  width: 80%;
+}
+.EditQuestGiver {
+  height: 10%;
+  left: 10%;
+  position: absolute;
+  top: 45%;
+  width: 80%;
+}
+.EditQuestRequirements {
+  height: 10%;
+  left: 10%;
+  position: absolute;
+  top: 55%;
+  width: 80%;
+}
+.EditQuestRewards {
+  height: 10%;
+  left: 10%;
+  position: absolute;
+  top: 65%;
+  width: 80%;
+}
+.navbar {
+  position: fixed;
+  width: 100%;
+}
+.OpenGamingLicense {
+  position: absolute;
+  color: white;
+  width: 50%;
+  left: 25%;
+  top: 5%; 
+  height: 90%;
+  overflow: auto;
+}
+.OpenGamingLicenseText{
+  position: absolute;
+  height: 100%;
+  width: 94%;
+  top: 0%;
+  left: 3%;
+  color: black;
+  overflow: auto;
+}
+.OpenGamingLicenseText::-webkit-scrollbar {
+  position: fixed;
+  height: 50px;
+  margin: 5%;
+  padding: 5%;
+  width: 2%;
+}
+.OpenGamingLicenseText::-webkit-scrollbar-track {
+  background-color: #3f3f3f;
+  border-radius: 50px;
+}
+.OpenGamingLicenseText::-webkit-scrollbar-button:vertical {
+  height: 5px;
+  width: 0;
+}
+.OpenGamingLicenseText::-webkit-scrollbar-thumb {
+  background: #7e7e7e;
+  border-radius: 50px;
+  height: 5px;
+}
+.CopyrightText {
+  position: absolute;
+  z-index: 2;
+  width: 40%;
+  left: 30%;
+  min-height: 44.1px;
+  bottom: 0%;
+  height: 5%;
+  
+  color: black;
+}
+
+.LeftAdSwag {
+  border: 1px solid white;
+  top: 0%;
+  position: absolute;
+  height: 100%;
+  width: 20%;
+  left: 0%;
+}
+.RightAdSwag {
+  border: 1px solid white;
+  top: 0%;
+  position: absolute;
+  height: 100%;
+  width: 20%;
+  right: 0%;
+}
+.ButtonImageTest{
+  position: absolute;
+  background: url("./images/green_x.png");
+  background-size: cover;
+}
+
+
+@media screen and (max-width:1750px){
+  .AddTextOrganization{
+    font-size: 32px;
+  }
+}
+@media screen and (max-width:1625px){
+  .AddTextBuilding{
+    font-size: 37px;
+  }
+  .AddTextSettlementOrganization{
+    font-size: 23px;
+  }
+  .AddTextCreateSettlement{
+    font-size: 30px;
+  }
+}
+@media screen and (max-width:1575px){
+  .AddTextOrganization{
+    font-size: 28px;
+  }
+  .AddTextSettlementOrganization{
+    font-size: 20px;
+  }
+  .SpecificCombatAction {
+
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 14px;
+    height: 6%;
+    margin: 1px;
+    margin-left: 5%;
+    margin-right: -3%;
+    overflow: auto;
+    width: 85%;
+  }
+  .SpecificConditionDisplay{
+  display: inline-block;
+  font-size: 14px;
+  height: 6%;
+  margin: 1px;
+  margin-left: 5%;
+  margin-right: -3%;
+  overflow: auto;
+  text-align: center;
+  width: 85%;
+  }
+
+  .CombatHelperSubheader {
+    display: inline-block;
+  font-size: 20px;
+  height: 6%;
+  margin: 1px;
+  margin-left: 5%;
+  margin-right: -3%;
+  overflow: auto;
+  text-align: center;
+  width: 85%;
+  }
+}
+@media screen and (max-width: 1480px) {
+  .AddText{
+    position: absolute;
+    color: black;
+    text-align: center;
+    left: 1%;
+    width: 98%;
+    height: 40%;
+    font-size: 25px;
+    overflow: hidden;
+    font-family: Adventure;
+  }
+  .AddTextCreateSettlement{
+    font-size: 30px;
+  }
+  .AddTextOrganization{
+    font-size: 25px;
+  }
+  .GoBackBook{
+    font-size: 25px;
+  }
+  .GoBackBookEncounter{
+    font-size: 25px;
+  }
+  .AddTextSettlementBuilding{
+    font-size: 27px;
+  }
+  .EncounterCharacterSpeedText {
+   font-size: 10px;
+  }
+  .WizardHolder{
+    position: absolute;
+    height: 500px;
+    width:300px;
+    top: 20%;
+    left: 300px;
+  }
+  .Encounter1{
+    top: 175px;
+    height: 200px;
+  }
+  .Encounter2{
+    top: 75px;
+    height: 300px;
+  }
+  .Encounter3{
+    top: 200px;
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 1320px) {
+  .AddTextSettlementOrganization{
+    font-size: 18px;
+  }
+  .AddTextSettlementBuilding{
+    font-size: 25px;
+  }
+  .AddTextSettlementNPC{
+    font-size: 35px;
+  }
+  .InitiativeTrackerText {
+    font-size: 24px;
+  }
+  .WizardHolder{    
+    left: 250px;
+  }
+  .SettlementTutorialPane{    
+    left: 150px;    
+  }
+  .Encounter1{    
+    left: 550px;  
+  }
+  .Encounter2{    
+    left: 550px;
+  }
+  .Encounter3{
+    left: 550px;
+  }
+  .SettlementTutorialPaneTriangle{
+    left: 580px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .AddText{
+    position: absolute;
+    color: black;
+    text-align: center;
+    left: 1%;
+    width: 98%;
+    height: 40%;
+    font-size: 20px;
+    overflow: hidden;
+    font-family: Adventure;
+  }
+  .AddTextCreateSettlement{
+    font-size: 27px;
+  }
+  .AddTextOrganization{
+    font-size: 22px;
+  }
+  .BookSubmitButton{
+    font-size: 25px;
+  }
+  .ViewPageDisplayViewButton{
+    font-size: 12px;
+  }
+  .GoBackBook{
+    font-size: 18px;
+  }
+  .AddTextSettlementOrganization{
+    font-size: 16px;
+  }
+  .AddTextSettlementBuilding{
+    font-size: 22px;
+  }
+  .EditCharacterSpellcastingText{
+    font-size: 9px;
+  }
+  .InitiativeTrackerText {
+    font-size: 23px;
+  }
+  .WizardHolder{    
+    left: 200px;
+  }
+  .SettlementTutorialPane{    
+    left: 100px;    
+  }
+  .Encounter1{    
+    left: 500px;  
+  }
+  .Encounter2{    
+    left: 500px;
+  }
+  .Encounter3{
+    left: 500px;
+  }
+  .SettlementTutorialPaneTriangle{
+    left: 530px;
+  }
+}
+@media screen and (max-width: 1190px) {
+  .EditCharacterSquareText{
+    font-size: 9px;
+  }
+  .AddTextSettlementNPC{
+    font-size: 30px;
+  }
+  .AddTextBuilding{
+    font-size: 34px;
+  }
+  .EditCharacterSpellcastingText{
+    font-size: 8px;
+  }
+  .InitiativeTrackerText {
+    font-size: 22px;
+  }
+  .WizardHolder{    
+    left: 150px;
+  }
+  .SettlementTutorialPane{    
+    left: 50px;    
+  }
+  .Encounter1{    
+    left: 450px;  
+  }
+  .Encounter2{    
+    left: 450px;
+  }
+  .Encounter3{
+    left: 450px;
+  }
+  .SettlementTutorialPaneTriangle{
+    left: 480px;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .AddText{
+    position: absolute;
+    color: black;
+    text-align: center;
+    left: 1%;
+    width: 98%;
+    height: 40%;
+    font-size: 15px;
+    overflow: hidden;
+    font-family: Adventure;
+  }
+  .AddTextCreateSettlement{
+    font-size: 23px;
+  }
+  .AddTextBuilding{
+    font-size: 30px;
+  }
+  .AddTextOrganization{
+    font-size: 18px;
+  }
+  .AddTextSettlementOrganization{
+    font-size: 14px;
+  }
+  .AddTextSettlementBuilding{
+    font-size: 20px;
+  }
+  .ShowInfoButton {
+    font-size: 32px;
+  }
+  .EncounterCharacterSpeedText {
+    font-size: 8px;
+   }
+   .EditCharacterPassivePerceptionText {
+    font-size: 10px;
+  }
+  .EditCharacterText {
+    font-size: 11px;
+  }
+  .EditCharacterSpellMaximizeRemoveHolder{
+    font-size: 12px;
+  }
+  .EditCharacterSpellcastingText{
+    font-size: 7px;
+  }
+  .InitiativeTrackerText {
+    font-size: 19px;
+  }
+  .DiceRollerHeaderText{
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 960px) {
+  .AddTextSettlementOrganization{
+    position: absolute;
+    color: black;
+    text-align: center;
+    left: 1%;
+    width: 98%;
+    height: 40%;
+    font-size: 13px;
+    overflow: hidden;
+    font-family: Adventure;
+  }
+  .AddTextSettlementBuilding{
+    font-size: 15px;
+  }
+  .ShowInfoButton {
+    font-size: 30px;
+  }
+  .EncounterCharacterSpeedText {
+    font-size: 7px;
+   }
+   .EditCharacterSquareText{
+    font-size: 8px;
+  }
+  .EditCharacterText {
+    font-size: 10px;
+  }
+  .AddTextSettlementNPC{
+    font-size: 27px;
+  }
+  .InitiativeTrackerText {
+    font-size: 17px;
+  }
+  .OpenGamingLicenseLink {
+    font-size: 9px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .AddTextCreateSettlement{
+    font-size: 20px;
+  }
+  .AddTextBuilding{
+    font-size: 25px;
+  }
+  .BookSubmitButton{
+    font-size: 20px;
+  }
+  .AddTextOrganization{
+    font-size: 16px;
+  }
+  .ShowInfoButton {
+    font-size: 28px;
+  }
+  
+}
+
+@media screen and (max-width: 600px){
+  .WebsiteHeader .HeaderLinksHolder{
+    display: none;
+  }
+  .WebsiteHeader .NavbarLines{
+    display: table;
+  }
+}
+@media screen and (max-width: 500px) {
+  .ProfileActionsText {
+    color: #521400;
+    
+    font-family: Adventure;
+    font-size: 15px;
+    height: 100%;
+    left: 0%;
+    position: absolute;
+    top: 0%;
+    width: 100%;
+  }
+  
+}
+@media screen and (max-width: 400px) {
+  .CopyrightText{
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 1400px){
+  .WizardHolder{
+    left: 250px;
+  }
+  .SettlementTutorialPane{    
+    left: 150px;    
+  }
+  .Encounter1{    
+    left: 550px;  
+  }
+  .Encounter2{    
+    left: 550px;
+  }
+  .Encounter3{
+    left: 550px;
+  }
+  .SettlementTutorialPaneTriangle{
+    left: 580px;
+  }
+}
+@media screen and (max-width: 1300px){
+  .WizardHolder{
+    left: 200px;
+  }
+  .SettlementTutorialPane{    
+    left: 100px;    
+  }
+  .Encounter1{    
+    left: 500px;  
+  }
+  .Encounter2{    
+    left: 500px;
+  }
+  .Encounter3{
+    left: 500px;
+  }
+  .SettlementTutorialPaneTriangle{
+    left: 530px;
+  }
+}
+@media screen and (max-width: 1250px){
+  .WizardHolder{
+    left: 150px;
+  }
+  .SettlementTutorialPane{    
+    left: 50px;    
+  }
+  .Encounter1{    
+    left: 450px;  
+  }
+  .Encounter2{    
+    left: 450px;
+  }
+  .Encounter3{
+    left: 450px;
+  }
+  .SettlementTutorialPaneTriangle{
+    left: 480px;
+  }
+}
+@media screen and (max-width: 1200px){
+  .WizardHolder{
+    left: 100px;
+  }
+  .SettlementTutorialPane{    
+    left: 00px;    
+  }
+  .Encounter1{    
+    left: 400px;  
+  }
+  .Encounter2{    
+    left: 400px;
+  }
+  .Encounter3{
+    left: 400px;
+  }
+  .SettlementTutorialPaneTriangle{
+    left: 430px;
+  }
+}
+@media screen and (max-width: 1150px){
+  .WizardHolder{
+    left: 50px;
+  }
+  
+  .Encounter1{    
+    left: 350px;  
+  }
+  .Encounter2{    
+    left: 350px;
+  }
+  .Encounter3{
+    left: 350px;
+  }
+  .SettlementTutorialPaneTriangle{
+    left: 380px;
+  }
+}
+@media screen and (max-width: 1100px){
+  .WizardHolder{
+    left: 25px;
+  }
+  
+  .Encounter1{    
+    left: 325px;  
+  }
+  .Encounter2{    
+    left: 325px;
+  }
+  .Encounter3{
+    left: 325px;
+  }
+  .SettlementTutorialPaneTriangle{
+    left: 355px;
+  }
+}
+@media screen and (max-width: 1050px){
+  .Encounter1{    
+    width: 650px;
+  }
+  .Encounter2{    
+    width: 650px;
+  }
+  .Encounter3{
+    width: 650px;
+  } 
+}
+@media screen and (max-width: 1000px){
+  .Encounter1{    
+    width: 600px;
+    height: 225px;
+    top: 150px; 
+  }
+  .Encounter2{    
+    width: 600px;
+  height: 325px;
+  top: 50px;
+  }
+  .Encounter3{
+    width: 600px;
+  height: 275px;
+  top: 100px;
+  } 
+}
+
+@media screen and (max-width: 950px){
+  .Encounter1{    
+    width: 550px;
+    height: 250px;
+    top: 125px; 
+  }
+  .Encounter2{    
+    width: 550px;
+  height: 350px;
+  top: 25px;
+  }
+  .Encounter3{
+    width: 550px;
+  height: 300px;
+  top: 75px;
+  } 
+}
