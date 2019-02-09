@@ -88,8 +88,6 @@ class CreateQuest extends Component {
             this.resizedataURL(this.state.image, wantedWidth, wantedHeight);
           };
           img.src = this.state.image;
-
-         
         }
       );
     };
@@ -132,30 +130,30 @@ class CreateQuest extends Component {
       }
       return (
         <div className="ViewPageHolder">
-        <div
-          className="GoBackBook"
-          onClick={() => {
-            if (
-              window.confirm(
-                "Are you sure you want to leave this page? Unsaved changes will be lost."
-              )
-            ) {
-              window.location = "/quests"
-            }
-          }}
-        >
-          <div className="CenteredPlusNoColor">
+          <div
+            className="GoBackBook"
+            onClick={() => {
+              if (
+                window.confirm(
+                  "Are you sure you want to leave this page? Unsaved changes will be lost."
+                )
+              ) {
+                window.location = "/quests";
+              }
+            }}
+          >
+            <div className="CenteredPlusNoColor">
               <i className="fas fa-arrow-left" />
               Go Back
             </div>
-        </div>
+          </div>
           <div className="QuestHolder">
             <div className="ImageFill">
               <img src={Page} alt="" className="ImageFill" />
             </div>
 
             <div className="EditQuestName">
-              <div className="EditCharacterText">
+              <div className="EditCharacterOtherProficienciesAndLanguagesText">
                 <div className="CenteredNoPointer">Name</div>
               </div>
               <input
@@ -180,7 +178,7 @@ class CreateQuest extends Component {
             </div>
             <div className="EditQuestImageHolder">{imagePreview}</div>
             <div className="EditQuestGiver">
-              <div className="EditCharacterText">
+              <div className="EditQuestText">
                 <div className="CenteredNoPointer">QuestGiver(s)</div>
               </div>
               <input

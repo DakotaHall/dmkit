@@ -3071,9 +3071,9 @@ background-color: grey;
   width: 27.5%;
 }
 .EditSettlementImageHolder {
-  background-color: black;
+  background-color: white;
   border-radius: 5px;
-  color: white;
+  color: black;
   display: table-cell;
   height: 16%;
   left: 7%;
@@ -5174,6 +5174,16 @@ background-color: grey;
   top: 2.5%;
   width: 80%;
 }
+.EditQuestText {
+  
+  font-size: 14px;
+  height: 25%;
+  left: 1%;
+  position: absolute;
+  text-align: center;
+  top: 19%;
+  width: 98%;
+}
 .QuestNameError {
   color: red;
   font-size: 8px;
@@ -5195,9 +5205,9 @@ background-color: grey;
   width: 100%;
 }
 .EditQuestImageHolder {
-  background-color: black;
+  background-color: white;
   border-radius: 5px;
-  color: white;
+  color: black;
   display: table-cell;
   height: 23%;
   left: 10%;
@@ -5242,11 +5252,14 @@ background-color: grey;
 .OpenGamingLicense {
   position: absolute;
   color: white;
-  width: 50%;
-  left: 25%;
+  width: 60%;
+  left: 20%;
   top: 5%; 
   height: 90%;
   overflow: auto;
+}
+.OpenGamingLicenseParagraph{
+  width: 97%;
 }
 .OpenGamingLicenseText{
   position: absolute;
@@ -5263,6 +5276,7 @@ background-color: grey;
   margin: 5%;
   padding: 5%;
   width: 2%;
+  left: 10px;
 }
 .OpenGamingLicenseText::-webkit-scrollbar-track {
   background-color: #3f3f3f;
