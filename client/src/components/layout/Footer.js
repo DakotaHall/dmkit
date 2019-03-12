@@ -23,7 +23,7 @@ class Footer extends Component {
         </div>
         <div className="CopyrightText">
           <div className="CenteredNoPointer">
-            Copyright &copy; {new Date().getFullYear()} DMKit
+            Copyright &copy; {new Date().getFullYear()} Dakota Hall
           </div>
         </div>
         <div

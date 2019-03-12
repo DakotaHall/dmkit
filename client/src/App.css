@@ -1275,7 +1275,7 @@ border-radius: 50%;
 .OpenGamingLicenseLink {
   position: absolute;
   bottom: 0%;
-  height: 7%;
+  height: 100%;
   left: 1%;
   width: 30%;
   color: black;
@@ -1289,7 +1289,7 @@ border-radius: 50%;
 .ArtistCredit{
   position: absolute;
   bottom: 0%;
-  height: 7%;
+  height: 100%;
   right: 1%;
   width: 33%;
   color: black;
@@ -1298,6 +1298,7 @@ border-radius: 50%;
   overflow: hidden;
   text-overflow: clip;
   font-size: 14px;
+  min-height: 44.1px;
 }
 
 .ImageHolder {
@@ -5298,7 +5299,7 @@ background-color: grey;
   left: 30%;
   min-height: 44.1px;
   bottom: 0%;
-  height: 5%;
+  height: 100%;
   
   color: black;
 }
