@@ -2,3 +2,4 @@
 package-lock.json
 /config/keys_prod.js
 /config/default.json
+/config/production.json
