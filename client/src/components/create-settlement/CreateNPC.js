@@ -167,7 +167,7 @@ class CreateNPC extends Component {
     _id: ""
   };
 
-  componentWillMount = () => {
+  UNSAFE_componentWillMount = () => {
     if (this.props.npc !== undefined) {
       this.setState(
         {

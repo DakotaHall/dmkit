@@ -22,7 +22,7 @@ class EditQuest extends Component {
     disabled: false
   };
 
-  componentWillMount = () => {
+  UNSAFE_componentWillMount = () => {
     let neededQuest = this.state.neededProfile.quests.find(
       x => x._id === this.state.questId
     );
@@ -38,7 +38,7 @@ class EditQuest extends Component {
 
   componentDidMount() {}
 
-  componentWillReceiveProps(nextProps) {
+ UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.errors) {
       this.setState({ errors: nextProps.errors });
     }

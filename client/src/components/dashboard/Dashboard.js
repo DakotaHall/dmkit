@@ -21,7 +21,7 @@ class Dashboard extends Component {
     errors: {}
   };
 
-  componentWillReceiveProps(nextProps) {
+ UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.errors) {
       this.setState({ errors: nextProps.errors });
     }
@@ -33,7 +33,6 @@ class Dashboard extends Component {
     const profileData = {
       handle: this.state.handle
     };
-
     this.props.createProfile(profileData, this.props.history);
   };
 
@@ -41,8 +40,9 @@ class Dashboard extends Component {
     this.setState({ [e.target.name]: e.target.value });
   };
 
-  componentWillMount = () => {
+  UNSAFE_componentWillMount = () => {
     this.props.getCurrentProfile();
+    
   };
 
   onDeleteClick = e => {
@@ -51,14 +51,12 @@ class Dashboard extends Component {
 
   render() {
     const { profile, loading } = this.props.profile;
-
     let dashboardContent;
-
     if (profile === null || loading) {
       dashboardContent = <Spinner />;
     } else {
       // Check if logged in user has profile data
-      if (Object.keys(profile).length > 0) {
+      if (Object.keys(profile).length > 1) {
         dashboardContent = (
           <div>
             <div className="DashboardWelcomeText">

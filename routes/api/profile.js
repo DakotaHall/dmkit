@@ -1,223 +1,220 @@
-const express = require("express");
+
+ const fetch = require("node-fetch");
+
+ // Load Validation
+ const validateProfileInput = require("../../validation/profile");
+ const validateCharacterInput = require("../../validation/character");
+ const validateMonsterInput = require("../../validation/monster");
+ const validateNPCInput = require("../../validation/npc");
+ const validateSettlementInput = require("../../validation/settlement");
+ const validateQuestInput = require("../../validation/quest");
+ const validateEncounterInput = require("../../validation/encounter");
+
+ // Load Models
+ const NPC = require("../../models/NPCs");
+ const Character = require("../../models/Character");
+ const Monster = require("../../models/Monster");
+ const Encounter = require("../../models/Encounter");
+ const Settlement = require("../../models/Settlement");
+ const Quest = require("../../models/Quest");
+
+
+const express = require('express');
+
 const router = express.Router();
-const mongoose = require("mongoose");
-const passport = require("passport");
-const fetch = require("node-fetch");
+const auth = require('../../middleware/auth');
+const checkObjectId = require('../../middleware/checkObjectId');
 
-// Load Validation
-const validateProfileInput = require("../../validation/profile");
-const validateCharacterInput = require("../../validation/character");
-const validateMonsterInput = require("../../validation/monster");
-const validateNPCInput = require("../../validation/npc");
-const validateSettlementInput = require("../../validation/settlement");
-const validateQuestInput = require("../../validation/quest");
-const validateEncounterInput = require("../../validation/encounter");
+const Profile = require('../../models/Profile');
 
-// Load Models
-const Profile = require("../../models/Profile");
-const User = require("../../models/User");
-const NPC = require("../../models/NPCs");
-const Character = require("../../models/Character");
-const Monster = require("../../models/Monster");
-const Encounter = require("../../models/Encounter");
-const Settlement = require("../../models/Settlement");
-const Quest = require("../../models/Quest");
 
-// @route   GET api/profile
-// @desc    Get current users profile
-// @access  Private
-router.get(
-  "/",
-  passport.authenticate("jwt", { session: false }),
-  (req, res) => {
-    const errors = {};
-    Profile.findOne({ user: req.user.id })
-      .populate("user", ["name"])
-      .populate("NPCs")
-      .populate("monsters")
-      .populate("characters")
-      .populate("encounters")
-      .populate("settlements")
-      .populate("quests")
-      .exec()
-      .then(profile => {
-        if (!profile) {
-          errors.noprofile = "There is no profile for this user";
-          return res.status(404).json(errors);
-        }
+// @route    GET api/profile/me
+// @desc     Get current users profile
+// @access   Private
+router.get('/', auth, async (req, res) => {
+  try {
+    const profile = await Profile.findOne({
+      user: req.user.id
+    }).populate("user", ["name"])
+    .populate("NPCs")
+    .populate("monsters")
+    .populate("characters")
+    .populate("encounters")
+    .populate("settlements")
+    .populate("quests");
 
-        res.json(profile);
-      })
-      .catch(err => res.status(404).json(err));
-  }
-);
-
-// @route   GET api/profile/handle/:handle
-// @desc    Get profile by handle
-// @access  Public
-router.get("/handle/:handle", (req, res) => {
-  const errors = {};
-
-  Profile.findOne({ handle: req.params.handle })
-    .populate("user", ["name"])
-    .then(profile => {
-      if (!profile) {
-        errors.noprofile = "There is no profile for this user";
-        res.status(404).json(errors);
-      }
-
-      res.json(profile);
-    })
-    .catch(err => res.status(404).json(err));
-});
-
-// @route   GET api/profile/user/:user_id
-// @desc    Get profile by user ID
-// @access  Public
-
-router.get("/user/:user_id", (req, res) => {
-  const errors = {};
-
-  Profile.findOne({ user: req.params.user_id })
-    .populate("user", ["name"])
-    .then(profile => {
-      if (!profile) {
-        errors.noprofile = "There is no profile for this user";
-        res.status(404).json(errors);
-      }
-
-      res.json(profile);
-    })
-    .catch(err =>
-      res.status(404).json({ profile: "There is no profile for this user" })
-    );
-});
-
-// @route   POST api/profile
-// @desc    Create or Edit user profile
-// @access  Private
-router.post(
-  "/",
-  passport.authenticate("jwt", { session: false }),
-  (req, res) => {
-    const { errors, isValid } = validateProfileInput(req.body);
-
-    // Check Validation
-    if (!isValid) {
-      // Return any errors with 400 status
-      return res.status(400).json(errors);
+    if (!profile) {
+      return res.status(400).json({ msg: 'There is no profile for this user' });
     }
 
-    // Get fields
-    const profileFields = {};
-    profileFields.user = req.user.id;
-    if (req.body.handle) profileFields.handle = req.body.handle;
+    res.json(profile);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server Error');
+  }
+});
 
-    Profile.findOne({ user: req.user.id }).then(profile => {
-      if (profile) {
-        // Update;
-        Profile.findOneAndUpdate(
-          { user: req.user.id },
-          { $set: profileFields },
-          { new: true }
-        ).then(profile => res.json(profile));
-      } else {
-        //Create
 
-        // Check if handle exists
-        Profile.findOne({ handle: profileFields.handle }).then(profile => {
-          if (profile) {
-            errors.handle = "That handle already exists";
-            res.status(400).json(errors);
-          }
-
-          // Save Profile
-          new Profile(profileFields).save().then(profile => {
-            fetch(
-              "https://dl.dropboxusercontent.com/s/iwz112i0bxp2n4a/5e-SRD-Monsters.json"
-            )
-              .then(function(response) {
-                return response.json();
-              })
-              .then(myJson => {
-                for (let i = 0; i < myJson.length - 1; i++) {
-                  const newMonster = new Monster({
-                    name: myJson[i].name + "*",
-                    user: req.user.id,
-                    size: myJson[i].size,
-                    challenge_rating: myJson[i].challenge_rating,
-                    type: myJson[i].type,
-                    subtype: myJson[i].subtype,
-                    hit_points: myJson[i].hit_points,
-                    alignment: myJson[i].alignment,
-                    hit_dice: myJson[i].hit_dice,
-                    strength: myJson[i].strength,
-                    dexterity: myJson[i].dexterity,
-                    constitution: myJson[i].constitution,
-                    intelligence: myJson[i].intelligence,
-                    wisdom: myJson[i].wisdom,
-                    charisma: myJson[i].charisma,
-                    strength_save: myJson[i].strength_save,
-                    dexterity_save: myJson[i].dexterity_save,
-                    constitution_save: myJson[i].constitution_save,
-                    intelligence_save: myJson[i].intelligence_save,
-                    wisdom_save: myJson[i].wisdom_save,
-                    charisma_save: myJson[i].charisma_save,
-                    acrobatics: myJson[i].acrobatics,
-                    animal_handling: myJson[i].animal_handling,
-                    arcana: myJson[i].arcana,
-                    athletics: myJson[i].athletics,
-                    deception: myJson[i].deception,
-                    history: myJson[i].history,
-                    insight: myJson[i].insight,
-                    intimidation: myJson[i].intimidation,
-                    investigation: myJson[i].investigation,
-                    medicine: myJson[i].medicine,
-                    nature: myJson[i].nature,
-                    perception: myJson[i].perception,
-                    performance: myJson[i].performance,
-                    persuasion: myJson[i].persuasion,
-                    religion: myJson[i].religion,
-                    sleight_of_hand: myJson[i].sleight_of_hand,
-                    stealth: myJson[i].stealth,
-                    survival: myJson[i].survival,
-                    damage_vulnerabilities: myJson[i].damage_vulnerabilities,
-                    armor_class: myJson[i].armor_class,
-                    damage_resistances: myJson[i].damage_resistances,
-                    speed: myJson[i].speed,
-                    damage_immunities: myJson[i].damage_immunities,
-                    condition_immunities: myJson[i].condition_immunities,
-                    senses: myJson[i].senses,
-                    languages: myJson[i].languages,
-                    special_abilities: myJson[i].special_abilities,
-                    actions: myJson[i].actions,
-                    legendary_actions: myJson[i].legendary_actions
-                  });
-                  newMonster.save();
-
-                  profile.monsters.push(newMonster);
-                }
-
-                profile.encounter_tutorial = true;
-                profile.encounter_add_tutorial = true;
-                profile.settlement_tutorial = true;
-              })
-              .then(() => {
-                profile.save().then(profile => res.json(profile));
-              });
-          });
-        });
+router.post(
+    "/",
+    auth,
+    (req, res) => {
+      const { errors, isValid } = validateProfileInput(req.body);
+      // Check Validation
+      if (!isValid) {
+        // Return any errors with 400 status
+        return res.status(400).json(errors);
       }
-    });
+  
+      // Get fields
+      const profileFields = {};
+      profileFields.user = req.user.id;
+      if (req.body.handle) profileFields.handle = req.body.handle;
+  
+      Profile.findOne({ user: req.user.id }).then(profile => {
+        if (profile) {
+          // Update;
+          Profile.findOneAndUpdate(
+            { user: req.user.id },
+            { $set: profileFields },
+            { new: true }
+          ).then(profile => res.json(profile));
+        } else {
+          //Create
+          // Check if handle exists
+          Profile.findOne({ handle: profileFields.handle }).then(profile => {
+            if (profile) {
+              errors.handle = "That handle already exists";
+              res.status(400).json(errors);
+            }
+  
+            // Save Profile
+            new Profile(profileFields).save().then(profile => {
+              fetch(
+                "https://dl.dropboxusercontent.com/s/iwz112i0bxp2n4a/5e-SRD-Monsters.json"
+              )
+                .then(function(response) {
+                  return response.json();
+                })
+                .then(myJson => {
+                  for (let i = 0; i < myJson.length - 1; i++) {
+                    
+                    const newMonster = new Monster({
+                      name: myJson[i].name + "*",
+                      user: req.user.id,
+                      size: myJson[i].size,
+                      challenge_rating: myJson[i].challenge_rating,
+                      type: myJson[i].type,
+                      subtype: myJson[i].subtype,
+                      hit_points: myJson[i].hit_points,
+                      alignment: myJson[i].alignment,
+                      hit_dice: myJson[i].hit_dice,
+                      strength: myJson[i].strength,
+                      dexterity: myJson[i].dexterity,
+                      constitution: myJson[i].constitution,
+                      intelligence: myJson[i].intelligence,
+                      wisdom: myJson[i].wisdom,
+                      charisma: myJson[i].charisma,
+                      strength_save: myJson[i].strength_save,
+                      dexterity_save: myJson[i].dexterity_save,
+                      constitution_save: myJson[i].constitution_save,
+                      intelligence_save: myJson[i].intelligence_save,
+                      wisdom_save: myJson[i].wisdom_save,
+                      charisma_save: myJson[i].charisma_save,
+                      acrobatics: myJson[i].acrobatics,
+                      animal_handling: myJson[i].animal_handling,
+                      arcana: myJson[i].arcana,
+                      athletics: myJson[i].athletics,
+                      deception: myJson[i].deception,
+                      history: myJson[i].history,
+                      insight: myJson[i].insight,
+                      intimidation: myJson[i].intimidation,
+                      investigation: myJson[i].investigation,
+                      medicine: myJson[i].medicine,
+                      nature: myJson[i].nature,
+                      perception: myJson[i].perception,
+                      performance: myJson[i].performance,
+                      persuasion: myJson[i].persuasion,
+                      religion: myJson[i].religion,
+                      sleight_of_hand: myJson[i].sleight_of_hand,
+                      stealth: myJson[i].stealth,
+                      survival: myJson[i].survival,
+                      damage_vulnerabilities: myJson[i].damage_vulnerabilities,
+                      armor_class: myJson[i].armor_class,
+                      damage_resistances: myJson[i].damage_resistances,
+                      speed: myJson[i].speed,
+                      damage_immunities: myJson[i].damage_immunities,
+                      condition_immunities: myJson[i].condition_immunities,
+                      senses: myJson[i].senses,
+                      languages: myJson[i].languages,
+                      special_abilities: myJson[i].special_abilities,
+                      actions: myJson[i].actions,
+                      legendary_actions: myJson[i].legendary_actions
+                    });
+                    newMonster.save();
+                    profile.monsters.push(newMonster);
+                  }
+  
+                  profile.encounter_tutorial = true;
+                  profile.encounter_add_tutorial = true;
+                  profile.settlement_tutorial = true;
+                })
+                .then(() => {
+                  profile.save().then(profile => res.json(profile));
+                });
+            });
+          });
+        }
+      });
+    }
+  );
+
+// @route    GET api/profile
+// @desc     Get all profiles
+// @access   Public
+router.get('/', async (req, res) => {
+  try {
+    const profiles = await Profile.find().populate("user", ["name"])
+           .populate("NPCs")
+           .populate("monsters")
+           .populate("characters")
+           .populate("encounters")
+           .populate("settlements")
+           .populate("quests");
+    res.json(profiles);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server Error');
+  }
+});
+
+// @route    GET api/profile/user/:user_id
+// @desc     Get profile by user ID
+// @access   Public
+router.get(
+  '/user/:user_id',
+  checkObjectId('user_id'),
+  async ({ params: { user_id } }, res) => {
+    try {
+      const profile = await Profile.findOne({
+        user: user_id
+      }).populate('user', ['name', 'avatar']);
+
+      if (!profile) return res.status(400).json({ msg: 'Profile not found' });
+
+      return res.json(profile);
+    } catch (err) {
+      console.error(err.message);
+      return res.status(500).json({ msg: 'Server error' });
+    }
   }
 );
-
 // @route   POST api/profile/settlementTutorial
 // @desc    Change settlement_tutorial value on Profile to false
 // @access  Private
 router.post(
   "/settlementTutorial",
-  passport.authenticate("jwt", { session: false }),
+  auth,
   (req, res) => {
     Profile.findOne({ user: req.user.id }).then(profile => {
       profile.settlement_tutorial = false;
@@ -231,7 +228,7 @@ router.post(
 // @access  Private
 router.post(
   "/encounterTutorial",
-  passport.authenticate("jwt", { session: false }),
+  auth,
   (req, res) => {
     Profile.findOne({ user: req.user.id }).then(profile => {
       profile.encounter_tutorial = false;
@@ -245,7 +242,7 @@ router.post(
 // @access  Private
 router.post(
   "/encounterAddTutorial",
-  passport.authenticate("jwt", { session: false }),
+  auth,
   (req, res) => {
     Profile.findOne({ user: req.user.id }).then(profile => {
       profile.encounter_add_tutorial = false;
@@ -259,7 +256,7 @@ router.post(
 // @access  Private
 router.post(
   "/npcs",
-  passport.authenticate("jwt", { session: false }),
+  auth,
   (req, res) => {
     const { errors, isValid } = validateNPCInput(req.body);
 
@@ -388,7 +385,7 @@ router.post(
 // @access  Private
 router.post(
   "/monsters",
-  passport.authenticate("jwt", { session: false }),
+  auth,
   (req, res) => {
     const { errors, isValid } = validateMonsterInput(req.body);
 
@@ -484,7 +481,7 @@ router.post(
 // @access  Private
 router.post(
   "/characters",
-  passport.authenticate("jwt", { session: false }),
+  auth,
   (req, res) => {
     const { errors, isValid } = validateCharacterInput(req.body);
 
@@ -616,7 +613,7 @@ router.post(
 // @access  Private
 router.post(
   "/encounters",
-  passport.authenticate("jwt", { session: false }),
+  auth,
   (req, res) => {
     const { errors, isValid } = validateEncounterInput(req.body);
 
@@ -663,7 +660,7 @@ router.post(
 // @access  Private
 router.post(
   "/settlements",
-  passport.authenticate("jwt", { session: false }),
+  auth,
   (req, res) => {
     const { errors, isValid } = validateSettlementInput(req.body);
 
@@ -703,7 +700,7 @@ router.post(
 // @access  Private
 router.post(
   "/quests",
-  passport.authenticate("jwt", { session: false }),
+  auth,
   (req, res) => {
     const { errors, isValid } = validateQuestInput(req.body);
 
@@ -734,7 +731,7 @@ router.post(
 // Edit Encounter
 router.put(
   "/encounters/:id",
-  passport.authenticate("jwt", { session: false }),
+  auth,
   (req, res) => {
     const { errors, isValid } = validateEncounterInput(req.body);
 
@@ -801,7 +798,7 @@ router.put(
 // @access  Private
 router.put(
   "/npcs/:id",
-  passport.authenticate("jwt", { session: false }),
+  auth,
   (req, res) => {
     const { errors, isValid } = validateNPCInput(req.body);
 
@@ -984,7 +981,7 @@ router.put(
 // @access  Private
 router.put(
   "/characters/:id",
-  passport.authenticate("jwt", { session: false }),
+  auth,
   (req, res) => {
     const { errors, isValid } = validateCharacterInput(req.body);
 
@@ -1192,7 +1189,7 @@ router.put(
 // @access  Private
 router.put(
   "/monsters/:id",
-  passport.authenticate("jwt", { session: false }),
+  auth,
   (req, res) => {
     const { errors, isValid } = validateMonsterInput(req.body);
 
@@ -1332,7 +1329,7 @@ router.put(
 // @access  Private
 router.put(
   "/settlements/:id",
-  passport.authenticate("jwt", { session: false }),
+  auth,
   (req, res) => {
     const { errors, isValid } = validateSettlementInput(req.body);
 
@@ -1378,7 +1375,7 @@ router.put(
 // @access  Private
 router.put(
   "/quests/:id",
-  passport.authenticate("jwt", { session: false }),
+  auth,
   (req, res) => {
     const { errors, isValid } = validateQuestInput(req.body);
 
@@ -1420,7 +1417,7 @@ router.put(
 // @access  Private
 router.delete(
   "/npcs/:npc_id",
-  passport.authenticate("jwt", { session: false }),
+  auth,
   (req, res) => {
     Profile.findOne(req.user.id, () => {
       NPC.findByIdAndRemove(req.params.npc_id)
@@ -1437,7 +1434,7 @@ router.delete(
 // @access  Private
 router.delete(
   "/characters/:char_id",
-  passport.authenticate("jwt", { session: false }),
+  auth,
   (req, res) => {
     Profile.findOne(req.user.id, () => {
       Character.findByIdAndRemove(req.params.char_id)
@@ -1454,7 +1451,7 @@ router.delete(
 // @access  Private
 router.delete(
   "/monsters/:mon_id",
-  passport.authenticate("jwt", { session: false }),
+  auth,
   (req, res) => {
     Profile.findOne(req.user.id, () => {
       Monster.findByIdAndRemove(req.params.mon_id)
@@ -1471,7 +1468,7 @@ router.delete(
 // @access  Private
 router.delete(
   "/encounters/:enc_id",
-  passport.authenticate("jwt", { session: false }),
+  auth,
   (req, res) => {
     Profile.findOne(req.user.id, () => {
       Encounter.findByIdAndRemove(req.params.enc_id)
@@ -1486,7 +1483,7 @@ router.delete(
 // Delete Settlement
 router.delete(
   "/settlements/:settlement_id",
-  passport.authenticate("jwt", { session: false }),
+  auth,
   (req, res) => {
     Profile.findOne(req.user.id, () => {
       Settlement.findByIdAndRemove(req.params.settlement_id)

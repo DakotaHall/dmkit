@@ -235,7 +235,7 @@ class IndividualNPC extends Component {
     file: ""
   };
 
-  componentWillMount = () => {
+  UNSAFE_componentWillMount = () => {
     this.setState(
       {
         name: this.props.npc.name,

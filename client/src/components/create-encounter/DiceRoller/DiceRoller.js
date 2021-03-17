@@ -415,6 +415,7 @@ class DiceRoller extends Component {
               maxLength="100"
               className="DiceRollResults"
               value={this.state.d4res}
+              readOnly={true}
             />
           </div>
           <div className="DiceDisplay">
@@ -458,6 +459,7 @@ class DiceRoller extends Component {
               maxLength="100"
               className="DiceRollResults"
               value={this.state.d6res}
+              readOnly={true}
             />
           </div>
           <div className="DiceDisplay">
@@ -501,6 +503,7 @@ class DiceRoller extends Component {
               maxLength="100"
               className="DiceRollResults"
               value={this.state.d8res}
+              readOnly={true}
             />
           </div>
           <div className="DiceDisplay">
@@ -548,6 +551,7 @@ class DiceRoller extends Component {
               maxLength="100"
               className="DiceRollResults"
               value={this.state.d10res}
+              readOnly={true}
             />
           </div>
           <div className="DiceDisplay">
@@ -595,6 +599,7 @@ class DiceRoller extends Component {
               maxLength="100"
               className="DiceRollResults"
               value={this.state.d12res}
+              readOnly={true}
             />
           </div>
           <div className="DiceDisplay">
@@ -642,6 +647,7 @@ class DiceRoller extends Component {
               maxLength="100"
               className="DiceRollResults"
               value={this.state.d20res}
+              readOnly={true}
             />
           </div>
           <div className="DiceDisplay">
@@ -689,6 +695,7 @@ class DiceRoller extends Component {
               maxLength="100"
               className="DiceRollResults"
               value={this.state.d100res}
+              readOnly={true}
             />
           </div>
           <div className="DiceDisplay">
@@ -744,6 +751,7 @@ class DiceRoller extends Component {
               maxLength="100"
               className="DiceRollResults"
               value={this.state.dXres}
+              readOnly={true}
             />
           </div>
         </div>

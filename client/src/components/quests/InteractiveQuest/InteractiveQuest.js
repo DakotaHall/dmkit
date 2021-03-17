@@ -6,7 +6,7 @@ import Spinner from "../../common/Spinner";
 import EditQuest from "./EditQuest.js";
 
 class InteractiveQuest extends Component {
-  componentWillMount = () => {
+  UNSAFE_componentWillMount = () => {
     this.props.getCurrentProfile();
   };
 

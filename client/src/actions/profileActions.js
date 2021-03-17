@@ -1,5 +1,4 @@
-import axios from "axios";
-
+import api from '../utils/api';
 import {
   GET_PROFILE,
   PROFILE_LOADING,
@@ -10,22 +9,22 @@ import {
 } from "./types";
 
 export const noSettlementTutorial = () => dispatch => {
-  axios.post("/api/profile/settlementTutorial");
+  api.post("/profile/settlementTutorial");
 };
 
 export const noEncounterTutorial = () => dispatch => {
-  axios.post("/api/profile/encounterTutorial");
+  api.post("/profile/encounterTutorial");
 };
 
 export const noEncounterAddTutorial = () => dispatch => {
-  axios.post("/api/profile/encounterAddTutorial");
+  api.post("/profile/encounterAddTutorial");
 };
 
 // Get current profile
 export const getCurrentProfile = (loadingType, history) => dispatch => {
   dispatch(setProfileLoading());
-  axios
-    .get("/api/profile")
+  api
+    .get("/profile")
     .then(res => {
       dispatch({
         type: GET_PROFILE,
@@ -60,8 +59,8 @@ export const getCurrentProfile = (loadingType, history) => dispatch => {
 // Get profile by handle
 export const getProfileByHandle = handle => dispatch => {
   dispatch(setProfileLoading());
-  axios
-    .get(`/api/profile/handle/${handle}`)
+  api
+    .get(`/profile/handle/${handle}`)
     .then(res =>
       dispatch({
         type: GET_PROFILE,
@@ -78,8 +77,8 @@ export const getProfileByHandle = handle => dispatch => {
 
 // Create Profile
 export const createProfile = (profileData, history) => dispatch => {
-  axios
-    .post("/api/profile", profileData)
+  api
+    .post("/profile", profileData)
     .then(res => {
       dispatch(getCurrentProfile("createProfile", history));
     })
@@ -98,8 +97,8 @@ export const editCharacter = (
   history
 ) => dispatch => {
   dispatch(clearErrors());
-  axios
-    .put(`/api/profile/characters/${character_id}`, characterData)
+  api
+    .put(`/profile/characters/${character_id}`, characterData)
     .then(res => dispatch(getCurrentProfile("characters", history)))
     .catch(err => dispatch({ type: GET_ERRORS, payload: err.response.data }));
 };
@@ -107,8 +106,8 @@ export const editCharacter = (
 // Edit a Monster
 export const editMonster = (monsterData, monster_id, history) => dispatch => {
   dispatch(clearErrors());
-  axios
-    .put(`/api/profile/monsters/${monster_id}`, monsterData)
+  api
+    .put(`/profile/monsters/${monster_id}`, monsterData)
     .then(res => dispatch(getCurrentProfile("monsters", history)))
     .catch(err => dispatch({ type: GET_ERRORS, payload: err.response.data }));
 };
@@ -116,8 +115,8 @@ export const editMonster = (monsterData, monster_id, history) => dispatch => {
 // Edit a NPC
 export const editNPC = (npcData, npc_id, history) => dispatch => {
   dispatch(clearErrors());
-  axios
-    .put(`/api/profile/npcs/${npc_id}`, npcData)
+  api
+    .put(`/profile/npcs/${npc_id}`, npcData)
     .then(res => dispatch(getCurrentProfile("npcs", history)))
     .catch(err => dispatch({ type: GET_ERRORS, payload: err.response.data }));
 };
@@ -129,8 +128,8 @@ export const editSettlement = (
   history
 ) => dispatch => {
   dispatch(clearErrors());
-  axios
-    .put(`/api/profile/settlements/${settlement_id}`, settlementData)
+  api
+    .put(`/profile/settlements/${settlement_id}`, settlementData)
     .then(res => {
       dispatch(getCurrentProfile("settlements", history));
     })
@@ -140,8 +139,8 @@ export const editSettlement = (
 // Delete a Character
 export const deleteCharacter = character_id => dispatch => {
   if (window.confirm("Are you sure? This can NOT be undone!")) {
-    axios
-      .delete(`/api/profile/characters/${character_id}`)
+    api
+      .delete(`/profile/characters/${character_id}`)
       .then(res => (window.location = window.location))
       .catch(err => dispatch({ type: GET_ERRORS, payload: err.response.data }));
   }
@@ -150,8 +149,8 @@ export const deleteCharacter = character_id => dispatch => {
 // Delete a Monster
 export const deleteMonster = monster_id => dispatch => {
   if (window.confirm("Are you sure? This can NOT be undone!")) {
-    axios
-      .delete(`/api/profile/monsters/${monster_id}`)
+    api
+      .delete(`/profile/monsters/${monster_id}`)
       .then(res => (window.location = window.location))
       .catch(err => dispatch({ type: GET_ERRORS, payload: err.response.data }));
   }
@@ -164,8 +163,8 @@ export const deleteNPC = npc_id => dispatch => {
       "Are you sure? This can NOT be undone! Any references to this NPC within a settlement will be deleted as well."
     )
   ) {
-    axios
-      .delete(`/api/profile/npcs/${npc_id}`)
+    api
+      .delete(`/profile/npcs/${npc_id}`)
       .then(res => (window.location = window.location))
       .catch(err => dispatch({ type: GET_ERRORS, payload: err.response.data }));
   }
@@ -174,8 +173,8 @@ export const deleteNPC = npc_id => dispatch => {
 // Delete a Settlement
 export const deleteSettlement = settlement_id => dispatch => {
   if (window.confirm("Are you sure? This can NOT be undone!")) {
-    axios
-      .delete(`/api/profile/settlements/${settlement_id}`)
+    api
+      .delete(`/profile/settlements/${settlement_id}`)
       .then(res => (window.location = window.location))
       .catch(err => dispatch({ type: GET_ERRORS, payload: err.response.data }));
   }
@@ -184,8 +183,8 @@ export const deleteSettlement = settlement_id => dispatch => {
 // Delete a Encounter
 export const deleteEncounter = encounter_id => dispatch => {
   if (window.confirm("Are you sure? This can NOT be undone!")) {
-    axios
-      .delete(`/api/profile/encounters/${encounter_id}`)
+    api
+      .delete(`/profile/encounters/${encounter_id}`)
       .then(res => (window.location = window.location))
       .catch(err => dispatch({ type: GET_ERRORS, payload: err.response.data }));
   }
@@ -194,8 +193,8 @@ export const deleteEncounter = encounter_id => dispatch => {
 // Delete a Quest
 export const deleteQuest = quest_id => dispatch => {
   if (window.confirm("Are you sure? This can NOT be undone!")) {
-    axios
-      .delete(`/api/profile/quests/${quest_id}`)
+    api
+      .delete(`/profile/quests/${quest_id}`)
       .then(res => (window.location = window.location))
       .catch(err => dispatch({ type: GET_ERRORS, payload: err.response.data }));
   }
@@ -204,8 +203,8 @@ export const deleteQuest = quest_id => dispatch => {
 // Create a Character
 export const createCharacter = (characterData, history) => dispatch => {
   dispatch(clearErrors());
-  axios
-    .post("/api/profile/characters", characterData)
+  api
+    .post("/profile/characters", characterData)
     .then(res => dispatch(getCurrentProfile("characters", history)))
     .catch(err =>
       dispatch({
@@ -218,8 +217,8 @@ export const createCharacter = (characterData, history) => dispatch => {
 // Create a Monster
 export const createMonster = (monsterData, history) => dispatch => {
   dispatch(clearErrors());
-  axios
-    .post("/api/profile/monsters", monsterData)
+  api
+    .post("/profile/monsters", monsterData)
     .then(res => dispatch(getCurrentProfile("monsters", history)))
     .catch(err =>
       dispatch({
@@ -232,8 +231,8 @@ export const createMonster = (monsterData, history) => dispatch => {
 // Create an NPC
 export const createNPC = (npcData, history) => dispatch => {
   dispatch(clearErrors());
-  axios
-    .post("/api/profile/npcs", npcData)
+  api
+    .post("/profile/npcs", npcData)
     .then(res => dispatch(getCurrentProfile("npcs", history)))
     .catch(err =>
       dispatch({
@@ -246,8 +245,8 @@ export const createNPC = (npcData, history) => dispatch => {
 // Create a Settlement
 export const createSettlement = (settlementData, history) => dispatch => {
   dispatch(clearErrors());
-  axios
-    .post("/api/profile/settlements", settlementData)
+  api
+    .post("/profile/settlements", settlementData)
     .then(res => {
       dispatch(getCurrentProfile("settlements", history));
     })
@@ -262,8 +261,8 @@ export const createSettlement = (settlementData, history) => dispatch => {
 // Create an Encounter
 export const createEncounter = (encounterData, history) => dispatch => {
   dispatch(clearErrors());
-  axios
-    .post("/api/profile/encounters", encounterData)
+  api
+    .post("/profile/encounters", encounterData)
     .then(res => dispatch(getCurrentProfile("encounters", history)))
     .catch(err =>
       dispatch({
@@ -276,8 +275,8 @@ export const createEncounter = (encounterData, history) => dispatch => {
 // Create a Quest
 export const createQuest = (questData, history) => dispatch => {
   dispatch(clearErrors());
-  axios
-    .post("/api/profile/quests", questData)
+  api
+    .post("/profile/quests", questData)
     .then(res => dispatch(getCurrentProfile("quests", history)))
     .catch(err =>
       dispatch({
@@ -290,8 +289,8 @@ export const createQuest = (questData, history) => dispatch => {
 // Edit a Quest
 export const editQuest = (questData, quest_id, history) => dispatch => {
   dispatch(clearErrors());
-  axios
-    .put(`/api/profile/quests/${quest_id}`, questData)
+  api
+    .put(`/profile/quests/${quest_id}`, questData)
     .then(res => dispatch(getCurrentProfile("quests", history)))
     .catch(err => dispatch({ type: GET_ERRORS, payload: err.response.data }));
 };
@@ -303,8 +302,8 @@ export const editEncounter = (
   history
 ) => dispatch => {
   dispatch(clearErrors());
-  axios
-    .put(`/api/profile/encounters/${encounter_id}`, encounterData)
+  api
+    .put(`/profile/encounters/${encounter_id}`, encounterData)
     .then(res => dispatch(getCurrentProfile("encounters", history)))
     .catch(err => dispatch({ type: GET_ERRORS, payload: err.response.data }));
 };
@@ -312,8 +311,8 @@ export const editEncounter = (
 // Delete account & profile
 export const deleteAccount = () => dispatch => {
   if (window.confirm("Are you sure? This can NOT be undone!")) {
-    axios
-      .delete("/api/profile")
+    api
+      .delete("/profile")
       .then(res =>
         dispatch({
           type: SET_CURRENT_USER,

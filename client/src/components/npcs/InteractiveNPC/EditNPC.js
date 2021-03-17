@@ -170,13 +170,13 @@ class EditNPC extends Component {
     file: ""
   };
 
-  componentWillReceiveProps(nextProps) {
+ UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.errors) {
       this.setState({ errors: nextProps.errors });
     }
   }
 
-  componentWillMount = () => {
+  UNSAFE_componentWillMount = () => {
     let neededNPC = this.state.neededProfile.NPCs.find(
       x => x._id === this.state.npcId
     );

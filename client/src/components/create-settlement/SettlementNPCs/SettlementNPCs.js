@@ -20,7 +20,7 @@ class SettlementNPCs extends Component {
     hovered: false
   };
 
-  componentWillMount = () => {};
+  UNSAFE_componentWillMount = () => {};
 
   componentDidUpdate(prevProps, prevState) {
     if (

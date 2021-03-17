@@ -21,7 +21,7 @@ class Monsters extends Component {
     hovered: false
   };
 
-  componentWillMount = () => {
+  UNSAFE_componentWillMount = () => {
     this.props.getCurrentProfile();
   };
 

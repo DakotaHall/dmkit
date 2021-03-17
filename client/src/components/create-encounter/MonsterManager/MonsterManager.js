@@ -53,7 +53,7 @@ class MonsterManager extends Component {
     encounterTutorialPane: "Encounter3"
   };
 
-  componentWillMount = () => {
+  UNSAFE_componentWillMount = () => {
     let newHoveredArray = [];
     let newGreenCheckArray = [];
     for (let i = 0; i < this.state.premadeMonsters.length; i++) {

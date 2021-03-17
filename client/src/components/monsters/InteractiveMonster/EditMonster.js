@@ -129,7 +129,7 @@ class EditMonster extends Component {
     disabled: false
   };
 
-  componentWillMount = () => {
+  UNSAFE_componentWillMount = () => {
     let neededMonster = this.state.neededProfile.monsters.find(
       x => x._id === this.state.monsterId
     );
@@ -305,7 +305,7 @@ class EditMonster extends Component {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
+ UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.errors) {
       this.setState({ errors: nextProps.errors });
     }

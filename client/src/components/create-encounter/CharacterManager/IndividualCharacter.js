@@ -232,7 +232,7 @@ class IndividualCharacter extends Component {
     disabled: false
   };
 
-  componentWillMount = () => {
+  UNSAFE_componentWillMount = () => {
     this.setState(
       {
         name: this.props.character.name,

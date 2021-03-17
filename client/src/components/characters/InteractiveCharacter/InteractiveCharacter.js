@@ -6,7 +6,7 @@ import Spinner from "../../common/Spinner";
 import EditCharacter from "./EditCharacter.js";
 
 class InteractiveCharacter extends Component {
-  componentWillMount = () => {
+  UNSAFE_componentWillMount = () => {
     this.props.getCurrentProfile();
   };
 

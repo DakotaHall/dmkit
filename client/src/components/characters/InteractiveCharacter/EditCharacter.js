@@ -169,7 +169,7 @@ class EditCharacter extends Component {
     file: ""
   };
 
-  componentWillMount = () => {
+  UNSAFE_componentWillMount = () => {
     let neededCharacter = this.state.neededProfile.characters.find(
       x => x._id === this.state.characterId
     );
@@ -382,7 +382,7 @@ class EditCharacter extends Component {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
+ UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.errors) {
       this.setState({ errors: nextProps.errors });
     }
@@ -1433,6 +1433,7 @@ class EditCharacter extends Component {
             onChange={this.onChange}
             error={errors.proficiency_bonus}
             maxLength="100"
+            
           />
         </div>
 

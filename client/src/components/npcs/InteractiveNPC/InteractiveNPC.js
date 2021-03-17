@@ -6,7 +6,7 @@ import Spinner from "../../common/Spinner";
 import EditNPC from "./EditNPC.js";
 
 class InteractiveNPC extends Component {
-  componentWillMount = () => {
+  UNSAFE_componentWillMount = () => {
     this.props.getCurrentProfile();
   };
 

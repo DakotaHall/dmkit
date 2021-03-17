@@ -1,16 +1,14 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link,Redirect } from "react-router-dom";
 import { PropTypes } from "prop-types";
 import { connect } from "react-redux";
 
-class Landing extends Component {
-  componentDidMount() {
-    if (this.props.auth.isAuthenticated) {
-      this.props.history.push("/dashboard");
-    }
+const Landing = ({isAuthenticated}) => {
+  if(isAuthenticated){
+    return <Redirect to="/dashboard" />;
   }
 
-  render() {
+
     return (
       <div className="landing">
         <div className="LandingHeader">DM Kit</div>
@@ -28,14 +26,14 @@ class Landing extends Component {
         </Link>
       </div>
     );
-  }
+  
 }
 Landing.propTypes = {
-  auth: PropTypes.object.isRequired
+  isAuthenticated: PropTypes.bool
 };
 
 const mapStateToProps = state => ({
-  auth: state.auth
+  isAuthenticated: state.auth.isAuthenticated
 });
 
 export default connect(mapStateToProps)(Landing);

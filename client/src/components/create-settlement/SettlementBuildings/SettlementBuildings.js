@@ -62,14 +62,10 @@ class SettlementBuildings extends Component {
     );
   };
 
-  // removeBuilding = (index, e) => {
-  //   this.props.removeBuilding(index);
-  // };
 
   changeBuilding = (buildingIndex, buildingData) => {
     let oldState = this.state.buildings;
     oldState[buildingIndex] = buildingData;
-    // this.setState({ buildings: oldState });
     this.props.updateBuildings(oldState);
   };
 

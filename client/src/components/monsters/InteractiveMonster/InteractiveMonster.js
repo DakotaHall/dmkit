@@ -6,7 +6,7 @@ import Spinner from "../../common/Spinner";
 import EditMonster from "./EditMonster.js";
 
 class InteractiveMonster extends Component {
-  componentWillMount = () => {
+  UNSAFE_componentWillMount = () => {
     this.props.getCurrentProfile();
   };
 

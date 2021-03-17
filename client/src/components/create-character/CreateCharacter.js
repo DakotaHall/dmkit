@@ -171,7 +171,7 @@ class CreateCharacter extends Component {
     disabled: false
   };
 
-  componentWillMount = () => {
+  UNSAFE_componentWillMount = () => {
     this.props.getCurrentProfile();
   };
 
@@ -186,7 +186,7 @@ class CreateCharacter extends Component {
     }
   };
 
-  componentWillReceiveProps(nextProps) {
+ UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.errors) {
       this.setState({ errors: nextProps.errors });
     }

@@ -21,7 +21,7 @@ class Encounters extends Component {
     hovered: false
   };
 
-  componentWillMount = () => {
+  UNSAFE_componentWillMount = () => {
     this.props.getCurrentProfile();
   };
 
